@@ -18,4 +18,11 @@ I think macOS is a great OS for an *average* user. It gets unnecessarily complic
 
 I think I started getting more and more intrigued by using Linux when I picked up web development. I decided to look at different distributions and pick one to run on my old laptop. I remember trying out Ubuntu but I really didn't like GNOME desktop environment, so I decided to give Linux Mint a try. Although my laptop was fairly old and it only had 4GB RAM, it works suprisingly fast. All the tools I needed worked like on any other OS, so I decided to start install it on my hackintosh and dualboot alongside macOS. For that task I picked up Majaro with KDE desktop environment. I liked it so much so that each time I had to choose between macOS and Linux, I'd go for the latter. About a year ago I build a new PC exclusively for Linux so I can do all data science projcts I want on it. 
 
+## The good 
+
+## The bad 
+
+## The ugly
+
+## Epilogue
 
