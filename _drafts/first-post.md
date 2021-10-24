@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why bother with Linux"
-date:   2021-10-25 13:34
+date:   2021-10-24 13:34
 category: general
 ---
 
@@ -27,7 +27,7 @@ I like the fact that there is so much variety when it comes to different desktop
 
 One of the most important things that is uncommon among mainstream operating systems is privacy. It is in the DNA of open source operating systems like Linux, so there is no telemetry, no spying on you, and you are allowed to do whatever you like with your system. Linux won't start calling home all of a sudden and even if it did, people would be able to notice this and remove that part when compiling a kernel. 
 
-Lastly, Linux doesn't suffer from all malware and viruses that are created for Windows. 
+Lastly, Linux doesn't suffer from all malware and viruses that are created for Windows, so your environment is much safer. 
 
 ## The bad 
 
