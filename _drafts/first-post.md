@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why bother with Linux"
+title: "Two years in Linux"
 date:   2021-10-24 13:34
 category: general
 ---
