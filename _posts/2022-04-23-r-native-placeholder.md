@@ -10,7 +10,7 @@ other things, this release brought major improvements when using the
 native pipe operator (`|>`).
 
 You might be wondering: what is the native pipe anyways? Well, it's the
-base equivalent of `%>%` pipe from the `magrittr` package heavily
+base equivalent of `%>%` pipe from the `magrittr` package, heavily
 endorsed and used across `tidyverse` packages. It pipes a value forward
 into an expression or function call. This practice is common in other
 programming bd languages like F# or Elixir. Using pipes compared to
