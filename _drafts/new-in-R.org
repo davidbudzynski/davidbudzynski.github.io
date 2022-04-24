@@ -1,0 +1,153 @@
+#+title: New In R
+
+#+begin_export html
+---
+layout: post
+title: "placeholder"
+date: 2022-04-01 10:00
+category: general
+---
+#+end_export
+
+Example [fn:1]
+
+Yesterday (that is on April 22, 2022) R 4.2.0 was released and among other things, this release brought major improvements when using the native pipe operator (~|>~).
+
+You might be wondering: what is the native pipe anyways? Well, it's the base equivalent of ~%>%~ pipe from the ~magrittr~ package heavily endorsed and used across ~tidyverse~ packages. It pipes a value forward into an expression or function call. This practice is common in other programming bd languages like F# or Elixir. Using pipes compared to regular nesting of functions within each other allows for more readable code, since each step is presented in chronological order. Nested functions need to be read from the inside out to figure out what was the fist function used. Consider this example:
+
+#+begin_src R :results output code :exports both :session
+library(tidyverse, warn.conflicts = FALSE)
+
+slice(select(
+  mutate(
+    filter(mtcars, hp > 100), mpg = round(mpg)
+  ),
+  mpg, cyl, disp, hp
+), 1:5)
+#+end_src
+
+#+begin_export html
+---
+layout: post
+title: "asdsadas"
+date: 2022-04-24 12:04
+category: general
+---
+#+end_export
+
+#+RESULTS:
+#+begin_src R
+                  mpg cyl disp  hp
+Mazda RX4          21   6  160 110
+Mazda RX4 Wag      21   6  160 110
+Hornet 4 Drive     21   6  258 110
+Hornet Sportabout  19   8  360 175
+Valiant            18   6  225 105
+#+end_src
+
+By only using three functions it's not easy to find go from the inside out to find out where you started and where are you going with functions applied. Pipes make it much easier.
+
+#+begin_src R :results output code :session :exports both
+mtcars %>%
+  filter(hp > 100) %>%
+  mutate(mpg = round(mpg)) %>%
+  select(mpg, cyl, disp, hp) %>%
+  slice(1:5)
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+                  mpg cyl disp  hp
+Mazda RX4          21   6  160 110
+Mazda RX4 Wag      21   6  160 110
+Hornet 4 Drive     21   6  258 110
+Hornet Sportabout  19   8  360 175
+Valiant            18   6  225 105
+#+end_src
+
+Because magrittr is a package, it introduces another dependency. Native pipe solves this problem:
+
+#+begin_src R :results output code :session :exports both
+mtcars |>
+  filter(hp > 100) |>
+  mutate(mpg = round(mpg)) |>
+  select(mpg, cyl, disp, hp) |>
+  slice(1:5)
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+                  mpg cyl disp  hp
+Mazda RX4          21   6  160 110
+Mazda RX4 Wag      21   6  160 110
+Hornet 4 Drive     21   6  258 110
+Hornet Sportabout  19   8  360 175
+Valiant            18   6  225 105
+#+end_src
+
+Up until R 4.2.0, the native pipe was missing a placeholder to specify where data from the left hand side should be inserted on the right hand side. Magrittr uses the ~.~ symbol for this, which isn't compatible with the native pipe.
+
+#+begin_src R :results output code :session :exports both
+mtcars %>% lm(mpg ~ cyl, data = .)
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+
+Call:
+lm(formula = mpg ~ cyl, data = .)
+
+Coefficients:
+(Intercept)          cyl
+     37.885       -2.876
+#+end_src
+
+#+begin_src R :results output code :session :exports both
+mtcars |> lm(mpg ~ cyl, data = .)
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+Error in is.data.frame(data) : object '.' not found
+#+end_src
+
+One way to go around this problem was to write an anonymous function
+
+
+#+begin_src R :results output code :session :exports code
+mtcars |> {\(df) lm(mpg ~ cyl, data = df)}()
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+
+Call:
+lm(formula = mpg ~ cyl, data = df)
+
+Coefficients:
+(Intercept)          cyl
+     37.885       -2.876
+#+end_src
+
+You can see that this is not as elegant or easy when compared to a simple ~.~. This is why this release of R introduces the ~_~ placeholder for handle with this problem.
+
+#+begin_src R :results output code :session :exports code
+mtcars |> lm(mpg ~ cyl, data = _)
+#+end_src
+
+#+RESULTS:
+#+begin_src R
+
+Call:
+lm(formula = mpg ~ cyl, data = mtcars)
+
+Coefficients:
+(Intercept)          cyl
+     37.885       -2.876
+#+end_src
+
+One thing that is different than the ~.~ placeholder is the fact that you need to pass the name of the argument that will receive the ~_~ placeholder, therefore syntax like ~mtcars |> lm(mpg ~ cyl, _)~ won't be valid.
+
+I really like the new ~_~ placeholder and I will continue using the native pipe. I hope that some tidyverse functions will adapt to this so there's no need to return to margittr pipe in situations where base pipe and ~_~ placeholder don't work.
+
+[fn:1] https://google.com
