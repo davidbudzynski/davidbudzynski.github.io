@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "R 4.2.0 Native Placeholderr"
+title: "R 4.2.0 Native Placeholder"
 date:   2022-04-23 21:00
 category: general
 ---
