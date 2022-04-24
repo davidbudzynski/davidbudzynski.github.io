@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Two years in Linux"
+title: "Two years in Linux 2"
 date:   2021-10-25 21:50
 category: general
 ---
