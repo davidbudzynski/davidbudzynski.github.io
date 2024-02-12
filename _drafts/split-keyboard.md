@@ -34,9 +34,14 @@ Lorem ipsum.
 | Soldering kit (soldering iron, soldering silicone mat, solder) | 1       | 1          | 6.77      | 6.77         |
 |                                                                |         |            |           | 66.0372      |
 
+## build process 
+
+soldering
+
 ## software
 
 ## first month in (rough)
+
 -monkey type and other touch typing sites
 
 ## conclusions 
