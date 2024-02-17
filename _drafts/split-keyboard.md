@@ -6,20 +6,22 @@ date:   2024-02-11 16:15
 
 INTO txt here
 
-## Understanding ergonomics 
+## Understanding ergonomics
 
-### problems with traditional keyboards 
+### problems with traditional keyboards
 
 ### Design principles of split ergonomic keyboards
 
 - mention qmk, custom layouts, layers, ability to swap many layout types, touch typing,
 - vial
 
+## build process
 
-## build process 
-
+1. soldering
+2. flashing
 
 ## hardware
+
 Lorem ipsum.
 
 | Item                                                           | lot_qty | qty_per_kb | lot_price | per_kb_price |
@@ -34,14 +36,10 @@ Lorem ipsum.
 | Soldering kit (soldering iron, soldering silicone mat, solder) | 1       | 1          | 6.77      | 6.77         |
 |                                                                |         |            |           | 66.0372      |
 
-## build process 
-
-soldering
-
 ## software
 
 ## first month in (rough)
 
 -monkey type and other touch typing sites
 
-## conclusions 
+## conclusions
