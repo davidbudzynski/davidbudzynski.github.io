@@ -4,7 +4,7 @@ title: "Split Ergonomic Keyboards: Redefining Typing Comfort,Boosting Productivi
 date: 2024-02-11 16:15
 ---
 
-INTO txt here
+INTRO txt here
 
 ## Understanding ergonomics
 
