@@ -135,9 +135,48 @@ looks like this (each picture is a different layer):
 
 ## Learning to touch type
 
--monkey type and other touch typing sites
+When I started using the Cantor I could not touch type. Being used to a standard
+keyboard layout, I was making a lot of mistakes and I was very slow. Even with a
+layout printed out and placed in front of me, I was still making mistakes. I
+decided to improve my typing by practicing. Firstly, I stared doing exercises on
+[keybr.com][12], which would teach me to type common word combinations. Once I
+spent few weeks doing those for 30 minutes a day, I decided to move to
+exercising by typing words out. I found a website called [monkey-type][13]. I
+set my settings to typing 50 random words and I started to type. I did this for
+a few weeks and I noticed that I was getting better. I was making less mistakes
+and I was typing faster. I also noticed that I was getting used to the layout
+and I was not looking at the keyboard as much. I was also getting used to the
+column stagger and I was not making as many mistakes as I was before. I was also
+getting used to the thumb keys. At first I was so bad that often times the
+website would error out telling me I was too slow and too bad to calculate the
+statistics. Now I can type close to 60 words per minute, which isn't great but
+for usual typing and coding it is enough. I am still making mistakes from time
+to time, but I believe that with more practice I will get better. I stopped
+doing these exercises now because I feel like typing on this keyboard is
+actually more comfortable than on a traditional one. Here is the graph of my
+progress. It took me about two months to get to 40 words per minute.
+
+![typing speed graph](/assets/images/2024-03-09_18-31-typing-overall.png)
 
 ## conclusions
+
+I am very happy with the Cantor. It is a very comfortable keyboard to type on. I
+really like low profile mechanical switches and I think that the column stagger
+is great. There are a few things that I would change if I were to build another
+keyboard. I would use a different color of switches, because the brown ones are
+not light enough. I had to lube them which was time consuming and although it
+improved them by a lot, they still feel a little too heavy. I learnt my lesson
+and bought a switch tester, and decided that pink/gChoc switches are the best
+for me. I would also invest in a plastic case to cover the PCB. I did not do it
+to save money but I can see that dust collects on controllers and it difficult
+to remove if it gets between solder points which are too close together to use a
+brush or blow the dust with a can of compressed air.
+
+These minor issues aside, I am very happy with a switch to a 40% keyboard and I
+don't see myself getting much larger one in the future. I also think I won't be
+going back to a traditional keyboard. If you are thinking about getting a split
+keyboard, I would recommend you to do it. It is a fun project and it is very rewarding.
+
 
 [1]: <https://github.com/kata0510/Lily58>
 [2]: <https://github.com/foostan/crkbd>
@@ -150,3 +189,5 @@ looks like this (each picture is a different layer):
 [9]: <https://github.com/qmk/qmk_toolbox>
 [10]: <https://keyboard.gay/>
 [11]: <https://vial.rocks/>
+[12]: <https://www.keybr.com/>
+[13]: <https://monkeytype.com/>
