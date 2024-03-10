@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Split Ergonomic Keyboards and Touch Typing"
-date: 2024-03-09 16:15
+date: 2024-03-10 10:00
 category: general
 tags: Hardware
 ---
