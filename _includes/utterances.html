@@ -1,0 +1,41 @@
+<!-- 
+    check this link for how to use utterances: each github repo has to be set up
+    initially when using utterances, so keep that in mind for any new projects
+
+    The label argument takes only lables which are already created in the github
+    repo. comment is not a default label, so it has to be created in the github
+    repo first
+
+    https://utteranc.es/
+
+
+    some of the code below is also inspired by the following link:
+    https://gist.github.com/mwt/7b747b45d5e28e7a943490d7a3b8a4ff
+
+    It didn't initially work for me, but I think it was because I didn't have
+    the the _layouts/post.html file set up correctly. I had to add it. If you
+    don't have this file you need to create it with the existing html for your
+    current theme. I use the default one (minima) so I just copied the html from
+    here:
+    https://github.com/jekyll/minima/blob/38a84a949f9753c4542e25f422935f59b4913053/_layouts/post.html
+
+    and replaced the disquss code with the utterances code My actual title page
+    contains got each post is the title followed by " | David Budzynski's Blog",
+    so to make github issues title cleaner, I decided to remove the main title
+    of the blog  and prepend it with "Comments: " so it looks nicer and it more
+    intuitive to me.
+
+    If you do not want to have the _layouts/post.html file, you can just add the
+    ruby code to add comments to the bottom of each post. I think it's better to
+    have the _layouts/post.html file because it's cleaner and more organized,
+    but removing it is an option.
+ -->
+<script
+  src="https://utteranc.es/client.js"
+  repo="davidbudzynski/davidbudzynski.github.io"
+  issue-term="{{ include.issue-term | default: site.utterances.issue-term | default: 'title' }}"
+  label="comment"
+  theme="{{ include.theme | default: site.utterances.theme | default: 'github-light' }}"
+  crossorigin="anonymous"
+  async
+></script>
