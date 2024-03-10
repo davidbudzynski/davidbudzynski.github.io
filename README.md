@@ -10,3 +10,10 @@ To run the site locally, you need to have Ruby installed. Then, you can run the 
 ```bash
 bundle exec jekyll serve --open-url --livereload --drafts
 ```
+
+To update all gems within the project, run (assuming you have Bundler
+installed):
+
+```bash
+bundle update
+```
