@@ -2,6 +2,8 @@
 layout: post
 title: "Split Ergonomic Keyboards and Touch Typing"
 date: 2024-03-09 16:15
+category: general
+tags: Hardware
 ---
 
 ![Cantor split keyboard left side](/assets/images/IMG_20240310_073808.jpg)
