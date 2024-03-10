@@ -59,7 +59,7 @@ projects I want on it. Right now I'm running [Arch Linux][6], which is a very
 minimalist distribution. I will discuss my choice in future posts. After using
 it full-time for about a year here's what I do and don't like about.
 
-## The good 
+## The good
 
 Linux is the best operating machine for software development. Due to having a
 robust package manager built into a distribution, you can easily get the
@@ -85,7 +85,7 @@ part when compiling a kernel.
 Lastly, Linux doesn't suffer from all malware and viruses that are created for
 Windows, so your environment is much safer.
 
-## The bad 
+## The bad
 
 The only drawback that I experienced from using Linux day-to-day is the fact
 that big proprietary applications such as MS Office and Adobe aren't available.
@@ -93,13 +93,12 @@ This is not an issue with the operating system itself but people and many
 industries are used to certain type of workflows. My dayjob relies heavily on
 MS365 and it would be difficult to do some of that work on Linux. There are free
 an open source alternatives, but it takes time and effort to sway large
-organizations to start using these, especially if all they know is Windows. 
+organizations to start using these, especially if all they know is Windows.
 
 I also realize that although some distributions are very easy to use as someone
 who knows nothing about computers, it still might be difficult to solve some
 problems by using GUI only. Terminal is still king on Linux, so I can imagine
 that might be a deterrent for less technical folks.
-
 
 ## The ugly
 
@@ -113,7 +112,7 @@ to scale. Xorg also doesn't allow different scaling factors on multiple
 displays, so you need to either go full in with multiple HiDPI displays or stay
 with standard monitors. To combat these issues, an alternative and potential
 successor is being developed, but that also doesn't solve fractional scaling
-problems among other things. 
+problems among other things.
 
 ## Epilogue
 
@@ -123,7 +122,7 @@ being respected. Even though it isn't perfect, I think that everything in life
 is a matter of compromise. On this occasion, I'm ready to compromise the visual
 prettiness and access to proprietary software in favor of a highly functioning
 operating system that makes my life easier. In the future blogpost I will
-outline my desk setup and specific software I use, so stay tuned for that one. 
+outline my desk setup and specific software I use, so stay tuned for that one.
 
 [1]: <https://brew.sh/>
 [2]: <https://ubuntu.com/>
