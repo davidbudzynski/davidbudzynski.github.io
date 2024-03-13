@@ -6,4 +6,4 @@ permalink: /about/
 
 ## WIP
 
-Hi, I'm David!
+Hi, I'm David Budzyński!
