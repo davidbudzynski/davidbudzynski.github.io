@@ -4,6 +4,10 @@ title: Projects
 permalink: /projects/
 ---
 
+Here are some of the projects I've worked on in my free time. I've included a
+brief description of each project, and a link to the repository where you can
+find the code.
+
 ## [R-project-bootstrap](https://github.com/davidbudzynski/R-project-bootstrap)
 
 This is a simple R project template repository that I use to start new R
