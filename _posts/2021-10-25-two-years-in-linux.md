@@ -1,9 +1,9 @@
 ---
-layout: post
-title: "Two years in Linux"
-date:   2021-10-25 21:50
-category: general
-tags: Linux Hardware
+layout   : post
+title    : "Two years in Linux"
+date     :   2021-10-25 21:50
+category : general
+tags     : Linux Hardware
 ---
 
 ## Interactions with other operating systems
