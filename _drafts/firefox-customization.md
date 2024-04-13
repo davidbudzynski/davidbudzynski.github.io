@@ -17,12 +17,28 @@ default browser. Why?
 
 ## Customization
 
-### Add-ons
+Firefox is still the most customizable browser out there. You can change almost
+every aspect of it, from the way it looks to the way it behaves. You can make it
+look and feel exactly the way you want it to. You can make it yours. It is true
+that developers are trying to make it more difficult to customize Firefox, but
+it is still possible to do so if you know how.
+
+### About:config
+
+Firefox has a hidden configuration menu called `about:config` that allows you to
+change a lot of settings that are not available in the regular settings menu.
+Once these settings are changed, they are saved in a file called `prefs.js` in
+your profile directory. This file is a simple JavaScript file that you can edit
+manually if you want to. If you have a firefox account, it also syncs these
+settings across all your devices. These settings allow you to increase your
+privacy and security.
 
 ### userChrome.css
 
 talk about better UI here
 
 say how to fix picom's shadows
+
+### Add-ons
 
 ## Privacy
