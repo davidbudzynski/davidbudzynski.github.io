@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "Why I Use Firefox as my Default Browser"
-date:   2024-02-21 19:00
+title: "Why I use Firefox as my default browser"
+date:   2024-04-13 18:00
+category: general
+tags: Web Software Privacy
 ---
 
 ## Firefox's popularity around 2010's
