@@ -35,7 +35,12 @@ privacy and security.
 
 ### userChrome.css
 
-talk about better UI here
+If you want to change the way Firefox looks, and I mean if you don't like any
+elements of the UI, you can use `userChrome.css` file. This file allows you to
+change the appearance of Firefox's UI using CSS. You can change the colors, the
+fonts, the sizes, the positions, and the visibility of almost every element of
+the UI. You can make Firefox look exactly the way you want it to. You can make
+it yours.
 
 say how to fix picom's shadows
 
