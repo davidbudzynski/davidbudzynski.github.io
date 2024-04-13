@@ -23,10 +23,10 @@ modelling like linear regression
 
 ggplot works well and is usually quite intuitive
 
-### Niche packages 
+### Niche packages
 
-this is both good and bad, for several years there werent that many packages to
-compete with `data.table` in terms of functionality and speed but python catched
+this is both good and bad, for several years there weren't that many packages to
+compete with `data.table` in terms of functionality and speed but python caught
 up and surpassed it with the `polars` package.
 
 ## What makes it diffiult to use R
@@ -37,43 +37,42 @@ up and surpassed it with the `polars` package.
    names.
 2. this meme account showing compatibility with a proprietary language used by
    nobody: https://twitter.com/WhyDoesR
-3. The userbase has close to 0 knowledge about SWE, good coding practices and
-   using version control best exmaple of this is several OOP packages, with no
+3. The user base has close to 0 knowledge about SWE, good coding practices and
+   using version control best example of this is several OOP packages, with no
    consensus which one should be used.
 4. Despite CRAN having many packages, the majority of them are very poorly
    written and barely usable and not very well maintained
 5. The entire ecosystem has been hijacked by one company:
-
-     -  and this company appears to be pivoring into Python (first by making R
-   tools work better with R but it is likely they will abandon R altogether,
-   they appear to be sponsoring Python focused packages and they proably see
-   that they make the most money from putting Python into production through
    
-   their tools so this works for them)
-     - Rstudio sucks and isn't a serious IDE 
-     - Other than inividual voices stating that their packages suck there
+     - and this company appears to be pivoting into Python (first by making R
+       tools work better with R but it is likely they will abandon R altogether,
+       they appear to be sponsoring Python focused packages and they probably see
+       that they make the most money from putting Python into production through
+       their tools so this works for them)
+     - RStudio sucks and isn't a serious IDE
+     - Other than individual voices stating that their packages suck there
        appears to be zero resistance against them (because basic user of R
-       doesn't even understnad what dependencies are)
+       doesn't even understand what dependencies are)
 6. It gives the academia ivory tower vibes (bunch of academics developing the
    core language, not interacting with outside users, users mainly also in
    academia, not interested in contributing, students forced to use the language
    also not inclined to get involved in helping developing the language).
-7. Hard to find any help because packages contain stupid puns containg the
+7. Hard to find any help because packages contain stupid puns containing the
    letter R and the one letter name doesn't seem to help with searching for help
-   on google. 
+   on google.
 
 ### Outdated packaging system
 
-1. CRAN does not provide binaries on Linux, 
-2. the entire process of submitting a package undergoes a ruman review, your
+1. CRAN does not provide binaries on Linux, so you need to compile everything
+   from source
+2. the entire process of submitting a package undergoes a human review, your
    package needs to compile on some v old architectures like Solaris
 3. There are competing 3rd party package "marketplaces": ROpenSci, Posit Package
    Manager, GitHub
 4. It is impossible to ensure reproducibility without resorting to half baked
    3rd party packages (renv, groundhog) and even they can't guarantee it, so you
    need to use Docker
-   
+
 ### Alternatives
 
 Python and C++
-
