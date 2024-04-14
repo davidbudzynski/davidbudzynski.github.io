@@ -31,7 +31,7 @@ up and surpassed it with the `polars` package.
 
 ## What makes it diffiult to use R
 
-### For Statisticians by Statisticians
+### For Statisticians by Statisticians (this needs to broken into smaller points as there is a lot to unpack)
 
 1. There are many bizzare language design decisions, like inconsistent fucntion
    names.
@@ -60,6 +60,7 @@ up and surpassed it with the `polars` package.
 7. Hard to find any help because packages contain stupid puns containing the
    letter R and the one letter name doesn't seem to help with searching for help
    on google.
+8. The language lack many basic tools like good code formatting, linting, etc.
 
 ### Outdated packaging system
 
