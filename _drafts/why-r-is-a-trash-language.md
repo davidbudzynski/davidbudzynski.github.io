@@ -2,6 +2,7 @@
 layout : post
 title  : "R is a Terrible Programming Language"
 date   : 2024-02-21 19:00
+tags   : [R, Software, Data Science] 
 ---
 
 Into text here. say it was in your head but writing it prompted by a similar

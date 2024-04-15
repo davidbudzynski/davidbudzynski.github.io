@@ -2,7 +2,7 @@
 layout : post
 title  : "C++ Notebooks in Emacs' Org Mode"
 date   : 2024-03-15 19:00
-tags   : [emacs, org-mode, C++, software]
+tags   : [Emacs, org-mode, C++, software]
 ---
 
 I recently had to write some documentation for people who are not familiar with
