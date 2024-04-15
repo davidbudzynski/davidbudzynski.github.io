@@ -31,7 +31,7 @@ Org mode, similiar to Jupyter notebooks, allows you to write code blocks in the
 file and execute them. The source block looks like this:
 
 ```org
-#+BEGIN_SRC cpp
+#+BEGIN_SRC C++ :results output
 #include <iostream>
 
 int main() {
