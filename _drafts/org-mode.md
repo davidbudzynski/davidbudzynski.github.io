@@ -27,6 +27,19 @@ mode, how to set it up, and how to use it. Instead, I will focus on how to use
 org mode to write C++ code blocks and export them to HTML or PDF. For a beginner
 friendly setup, try [Doom Emacs][3]. It is a pre-configured version of Emacs.
 
+Org mode, similiar to Jupyter notebooks, allows you to write code blocks in the
+file and execute them. The source block looks like this:
+
+```org
+#+BEGIN_SRC cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
 [1]: https://orgmode.org/
 [2]: https://www.gnu.org/software/emacs/
 [3]: https://github.com/doomemacs/doomemacs
