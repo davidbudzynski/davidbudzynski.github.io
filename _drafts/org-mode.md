@@ -1,8 +1,8 @@
 ---
 layout : post
-title  : "Org mode for C++ notebooks"
-date   : 2024-03-13 18:00
-tags   :
+title  : "C++ Notebooks in Emacs' Org Mode"
+date   : 2024-03-15 19:00
+tags   : [emacs, org-mode, C++, software]
 ---
 
 I recently had to write some documentation for people who are not familiar with
@@ -27,7 +27,7 @@ mode, how to set it up, and how to use it. Instead, I will focus on how to use
 org mode to write C++ code blocks and export them to HTML or PDF. For a beginner
 friendly setup, try [Doom Emacs][3]. It is a pre-configured version of Emacs.
 
-Org mode, similiar to Jupyter notebooks, allows you to write code blocks in the
+Org mode, similar to Jupyter notebooks, allows you to write code blocks in the
 file and execute them. The source block looks like this:
 
 ```org
@@ -38,6 +38,7 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
+#+END_SRC
 ```
 
 The block will be compiles and executed when you press `C-c C-c` on the block.
