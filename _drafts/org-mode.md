@@ -40,7 +40,30 @@ int main() {
 }
 ```
 
+The block will be compiles and executed when you press `C-c C-c` on the block.
+The `:results output` part tells org mode to display the output of the code
+block. The output will be displayed below the block.
+
+```shell
+Hello, World!
+```
+
+Other than `:results output`, you can also use add many [other options][4] to
+the block. For example, you can add specific compiler flags, include paths, and
+libraries. You can also use the `:exports` option to control if the block should
+be exported to the final document.
+
+When it comes to writing documentation, org mode is a very powerful tool. In
+addition C++ code blocks, you can add most if not all programming languages to
+the document. It also supports LaTeX, so you can write mathematical equations in
+the document.
+
+I am going to use it to show simple or not so simple C++ functions and describe
+them in more detail, so it is easier for people to understand. I think for this
+tasks, it would be difficult to find another tool which is as easy to use as org
+mode.
+
 [1]: https://orgmode.org/
 [2]: https://www.gnu.org/software/emacs/
 [3]: https://github.com/doomemacs/doomemacs
-
+[4]: https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-C.html
