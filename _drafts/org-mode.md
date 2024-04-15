@@ -20,6 +20,14 @@ support for literate programming and reproducible research. It is a simple
 markup language that can be exported to HTML, PDF, and other formats. It is a
 much more powerful version of markdown.
 
+## How to use Org Mode's C++ code blocks
+
+This article would be too long if I were to explain all the features of org
+mode, how to set it up, and how to use it. Instead, I will focus on how to use
+org mode to write C++ code blocks and export them to HTML or PDF. For a beginner
+friendly setup, try [Doom Emacs][3]. It is a pre-configured version of Emacs.
+
 [1]: https://orgmode.org/
 [2]: https://www.gnu.org/software/emacs/
+[3]: https://github.com/doomemacs/doomemacs
 
