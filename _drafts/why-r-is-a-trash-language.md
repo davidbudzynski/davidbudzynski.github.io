@@ -37,37 +37,39 @@ data <- read.csv("student_data.csv")
 
 # Check for missing values
 missing_values <- any(is.na(data))
-if(missing_values) {
-  print("There are missing values in the dataset.")
-  # Handling missing values - for simplicity, we'll just remove rows with missing values
-  data <- na.omit(data)
+if (missing_values) {
+   print("There are missing values in the dataset.")
+   # Handling missing values - for simplicity, we'll just remove rows with
+   # missing values
+   data <- na.omit(data)
 }
 
-# Detect and handle outliers (assuming Test_Score and Study_Hours are numeric variables)
+# Detect and handle outliers (assuming Test_Score and Study_Hours are numeric
+# variables)
 outliers <- boxplot.stats(data$Test_Score)$out
-if(length(outliers) > 0) {
-  print("Outliers detected in Test_Score. Removing outliers.")
-  data <- data[!data$Test_Score %in% outliers, ]
+if (length(outliers) > 0) {
+   print("Outliers detected in Test_Score. Removing outliers.")
+   data <- data[!data$Test_Score %in% outliers, ]
 }
 
 # Aggregation: Calculate average test score by pass/fail status
-aggregate(Test_Score ~ Pass_Fail, data=data, FUN=mean)
+aggregate(Test_Score ~ Pass_Fail, data = data, FUN = mean)
 
 # Aggregation: Calculate median study hours by pass/fail status
-aggregate(Study_Hours ~ Pass_Fail, data=data, FUN=median)
+aggregate(Study_Hours ~ Pass_Fail, data = data, FUN = median)
 
 # Aggregation: Count the number of students in each pass/fail category
 table(data$Pass_Fail)
 
 # Aggregation: Summarize test scores by quartiles
-quantile(data$Test_Score, probs=c(0, 0.25, 0.5, 0.75, 1))
+quantile(data$Test_Score, probs = c(0, 0.25, 0.5, 0.75, 1))
 
 # Aggregation: Calculate summary statistics by pass/fail status
 aggregate(
    cbind(Test_Score, Study_Hours) ~ Pass_Fail,
-    data=data,
-    FUN=function(x) c(mean=mean(x), sd=sd(x), min=min(x), max=max(x))
-    )
+   data = data,
+   FUN = function(x) c(mean = mean(x), sd = sd(x), min = min(x), max = max(x))
+)
 ```
 When you are working on these small analyses it is quite easy to use external
 packages by just installing them from CRAN with `install.packages("package")`.
