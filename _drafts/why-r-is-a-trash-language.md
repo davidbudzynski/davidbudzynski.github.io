@@ -44,7 +44,7 @@ up and surpassed it with the `polars` package.
 4. Despite CRAN having many packages, the majority of them are very poorly
    written and barely usable and not very well maintained
 5. The entire ecosystem has been hijacked by one company:
-   
+
      - and this company appears to be pivoting into Python (first by making R
        tools work better with R but it is likely they will abandon R altogether,
        they appear to be sponsoring Python focused packages and they probably see
