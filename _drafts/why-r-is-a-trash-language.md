@@ -5,8 +5,17 @@ date   : 2024-02-21 19:00
 tags   : [R, Software, Data Science] 
 ---
 
-Into text here. say it was in your head but writing it prompted by a similar
-article liked here: https://www.hendrik-erz.de/post/a-rant
+Recently I have been contemplating about how I feel about R as a programming
+language. Even though I have been using it for many years now, I have never been
+able to shake the feeling that apart from several nice packages, R is an
+inferior language.
+
+Over the years there have been many criticisms of R, some of them are valid,
+like the [R Inferno book][1], some of them are not, like many medium articles by
+freshman year data science students who just discovered Python and R. More
+recently I read a [blog post][2], where the author echoes many of my own views
+about R, so I thought I would write my own take on the subject and give reasons
+why I want to rely less and less on R in the future.
 
 ## What R does well
 
@@ -78,3 +87,7 @@ up and surpassed it with the `polars` package.
 ### Alternatives
 
 Python and C++
+
+
+[1]: https://www.burns-stat.com/pages/Tutor/R_inferno.pdf
+[2]: https://www.hendrik-erz.de/post/a-rant
