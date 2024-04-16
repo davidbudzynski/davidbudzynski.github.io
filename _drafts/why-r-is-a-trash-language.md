@@ -119,11 +119,36 @@ are and that it also supports Python, but both quarto and Rmarkdown have more
 mature ecosystems that Jupyter notebooks and are text based, so they are easier
 to version control.
 
-### plotting
+### Plotting
 
-ggplot works well and is usually quite intuitive
+As you saw in examples above, R comes with a plotting library built in. While
+that library is not the best and it isn't very flexible and powerful, the
+[ggplot2][6] package is. This package is regarded as the best plotting library
+in the entire data science community. It is very easy to use and it is very
+powerful. It is also very easy to customize the plots, so you can make them look
+exactly how you want them to look. There are many people who claim that R is
+worth learning just so you can use ggplot2. On top of the package, there are
+dozens of extensions that make it even more powerful.
 
 ### Niche packages
+
+There are many packages that are very good and that are not available in other
+languages. For example, the [data.table][7] package is one of the fastest data
+manipulation packages in the world. It is very easy to use and it is very
+powerful. It is also very easy to use it in parallel, so you can speed up your
+code by using all the cores on your machine. The package is also very well
+maintained and it is very popular. The package is so good that it is used by
+many other packages as a backend because it is so fast and does not have any
+dependencies. Python has been catching up with R in terms of data manipulation
+with packages like `polars` but it is still not as well established as
+data.table is.
+
+In addition to very good quality packages, there are also many packages that are
+very niche and although they are not very popular, they are very useful for some
+people/companies. For example, there are many packages that are used for
+Bayesian modelling through the [rstan][8] package. Many academics select R to
+create a package that uses a novel method they developed, so there are many
+packages that are not available in other languages.
 
 this is both good and bad, for several years there weren't that many packages to
 compete with `data.table` in terms of functionality and speed but python caught
@@ -178,6 +203,11 @@ up and surpassed it with the `polars` package.
 
 Python and C++
 
-
 [1]: https://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 [2]: https://www.hendrik-erz.de/post/a-rant
+[3]: https://quarto.org/
+[4]: https://jupyter.org/
+[5]: https://rmarkdown.rstudio.com/
+[6]: https://ggplot2.tidyverse.org/
+[7]: https://rdatatable.gitlab.io/data.table/
+[8]: https://mc-stan.org/rstan/
