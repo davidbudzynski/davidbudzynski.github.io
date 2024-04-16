@@ -19,6 +19,9 @@ why I want to rely less and less on R in the future.
 
 ## What R does well
 
+Before I start bashing R, I want to mention that not everything about R is bad.
+There are some things that are hard to find a match for in other languages.
+
 ### small exploratory analyses
 
 something that won't be used by others, or does not matter that it dependencies
