@@ -140,19 +140,15 @@ code by using all the cores on your machine. The package is also very well
 maintained and it is very popular. The package is so good that it is used by
 many other packages as a backend because it is so fast and does not have any
 dependencies. Python has been catching up with R in terms of data manipulation
-with packages like `polars` but it is still not as well established as
+with packages like [polars][8] but it is still not as well established as
 data.table is.
 
 In addition to very good quality packages, there are also many packages that are
 very niche and although they are not very popular, they are very useful for some
 people/companies. For example, there are many packages that are used for
-Bayesian modelling through the [rstan][8] package. Many academics select R to
+Bayesian modelling through the [rstan][9] package. Many academics select R to
 create a package that uses a novel method they developed, so there are many
 packages that are not available in other languages.
-
-this is both good and bad, for several years there weren't that many packages to
-compete with `data.table` in terms of functionality and speed but python caught
-up and surpassed it with the `polars` package.
 
 ## What makes it diffiult to use R
 
@@ -210,4 +206,5 @@ Python and C++
 [5]: https://rmarkdown.rstudio.com/
 [6]: https://ggplot2.tidyverse.org/
 [7]: https://rdatatable.gitlab.io/data.table/
-[8]: https://mc-stan.org/rstan/
+[8]: https://polars.rs/
+[9]: https://mc-stan.org/rstan/
