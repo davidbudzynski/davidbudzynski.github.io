@@ -24,13 +24,100 @@ There are some things that are hard to find a match for in other languages.
 
 ### small exploratory analyses
 
-something that won't be used by others, or does not matter that it dependencies
-will be outdated in 2 years
+When it comes to small exploratory analyses, R is hard to beat. It is very easy
+to load data, clean it, and do some basic analyses. This is especially true when
+the data is in a CSV file, which is the most common format for data in the wild.
+You don't really need any external libraries to do this, the base R is enough.
+It is easy to execute the code in the REPL, and you can quickly see the results,
+like in this example:
 
-quick prototyping on datasets coming from CSV files
+```R
+# Load the dataset (assuming it's in a CSV file named 'student_data.csv')
+data <- read.csv("student_data.csv")
 
-in relation to the previous point: calculating descriptive stats and stat
-modelling like linear regression
+# Check for missing values
+missing_values <- any(is.na(data))
+if(missing_values) {
+  print("There are missing values in the dataset.")
+  # Handling missing values - for simplicity, we'll just remove rows with missing values
+  data <- na.omit(data)
+}
+
+# Detect and handle outliers (assuming Test_Score and Study_Hours are numeric variables)
+outliers <- boxplot.stats(data$Test_Score)$out
+if(length(outliers) > 0) {
+  print("Outliers detected in Test_Score. Removing outliers.")
+  data <- data[!data$Test_Score %in% outliers, ]
+}
+
+# Aggregation: Calculate average test score by pass/fail status
+aggregate(Test_Score ~ Pass_Fail, data=data, FUN=mean)
+
+# Aggregation: Calculate median study hours by pass/fail status
+aggregate(Study_Hours ~ Pass_Fail, data=data, FUN=median)
+
+# Aggregation: Count the number of students in each pass/fail category
+table(data$Pass_Fail)
+
+# Aggregation: Summarize test scores by quartiles
+quantile(data$Test_Score, probs=c(0, 0.25, 0.5, 0.75, 1))
+
+# Aggregation: Calculate summary statistics by pass/fail status
+aggregate(
+   cbind(Test_Score, Study_Hours) ~ Pass_Fail,
+    data=data,
+    FUN=function(x) c(mean=mean(x), sd=sd(x), min=min(x), max=max(x))
+    )
+```
+When you are working on these small analyses it is quite easy to use external
+packages by just installing them from CRAN with `install.packages("package")`.
+
+If you want to do more complex analyses on top of descriptive statistics, it is
+also very trivial to run a linear regression or a logistic regression.
+
+```R
+# Generate some example data
+set.seed(123)
+x <- 1:100
+y <- 2 * x + rnorm(100, mean = 0, sd = 10)
+
+# Fit linear regression model
+linear_model <- lm(y ~ x)
+
+# Summary of the linear regression model
+summary(linear_model)
+
+# Plot the data and the regression line
+plot(x, y, main = "Linear Regression Example", xlab = "x", ylab = "y")
+abline(linear_model, col = "red")
+```
+
+```R
+# Generate binary outcome data
+set.seed(123)
+x <- rnorm(100)
+prob <- exp(0.5 + 2 * x) / (1 + exp(0.5 + 2 * x))
+y <- rbinom(100, size = 1, prob)
+
+# Fit logistic regression model
+logistic_model <- glm(y ~ x, family = binomial)
+
+# Summary of the logistic regression model
+summary(logistic_model)
+
+# Plot the data and the logistic regression curve
+plot(x, y, main = "Logistic Regression Example", xlab = "x", ylab = "y", col = ifelse(y == 1, "blue", "red"))
+curve(predict(logistic_model, data.frame(x = x), type = "response"), add = TRUE, col = "green")
+```
+
+If you want to send this code to someone else, you can easily put the data into
+a [quarto][3] document and render the code into a PDF or HTML report. It is very
+similar to [Juptyer notebooks][4] in Python, but I find it easier to use and
+quarto's predecessor, [RMarkdown][5], pioneered this concept within the data
+science community. I am aware that quarto is not as popular as Jupyter notebooks
+are and that it also supports Python, but both quarto and Rmarkdown have more
+mature ecosystems that Jupyter notebooks and are text based, so they are easier
+to version control.
 
 ### plotting
 
