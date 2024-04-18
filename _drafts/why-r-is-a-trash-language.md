@@ -221,14 +221,14 @@ Twitter that made fun of these features.
      - Other than individual voices stating that their packages suck there
        appears to be zero resistance against them (because basic user of R
        doesn't even understand what dependencies are)
-6. It gives the academia ivory tower vibes (bunch of academics developing the
+4. It gives the academia ivory tower vibes (bunch of academics developing the
    core language, not interacting with outside users, users mainly also in
    academia, not interested in contributing, students forced to use the language
    also not inclined to get involved in helping developing the language).
-7. Hard to find any help because packages contain stupid puns containing the
+5. Hard to find any help because packages contain stupid puns containing the
    letter R and the one letter name doesn't seem to help with searching for help
    on google.
-8. The language lack many basic tools like good code formatting, linting, etc.
+6. The language lack many basic tools like good code formatting, linting, etc.
 
 ### Outdated packaging system
 
@@ -255,3 +255,5 @@ Python and C++
 [7]: https://rdatatable.gitlab.io/data.table/
 [8]: https://polars.rs/
 [9]: https://mc-stan.org/rstan/
+[10]: https://twitter.com/WhyDoesR
+[11]:https://stackoverflow.com/q/63606106/13158146
