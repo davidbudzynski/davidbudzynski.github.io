@@ -152,15 +152,31 @@ Bayesian modelling through the [rstan][9] package. Many academics select R to
 create a package that uses a novel method they developed, so there are many
 packages that are not available in other languages.
 
-## What makes it diffiult to use R
+## What makes it difficult to use R
 
-### For Statisticians by Statisticians (this needs to broken into smaller points as there is a lot to unpack)
+### For Statisticians by Statisticians
 
-1. There are many bizzare language design decisions, like inconsistent fucntion
-   names.
-2. this meme account showing compatibility with a proprietary language used by
-   nobody: https://twitter.com/WhyDoesR
-3. The user base has close to 0 knowledge about SWE, good coding practices and
+One of the major problems with R is that it was designed by statisticians for
+statisticians. This means that it is very good at doing statistics, but it is
+not good at being a programming language. The language makers chose some very
+interesing design choices like keeping function names inconsistent. For example,
+some functions use underscores, some use dots, some use camel case, some use
+Pascal case. For example there is `read.csv()` to read a CSV file, but if you want
+to read the binary version of the object with the `.Rds` extension, you need to
+use `readRDS()`.
+
+Another example is the `apply()` function. It is a very powerful function that
+allows for functional programming in R, but it is very hard to use. It is very
+hard to remember the arguments of the function, so you need to look them up
+every time you want to use it. This is a very common problem in R, many
+functions are very hard to use because they have many arguments and they are not
+consistent with each other. For this reason, people say not to use `apply()` and
+use `lapply()`, `sapply()`, `vapply()`, `mapply()`, `tapply()`, `rapply()`,
+depending on what you want to achieve, or you can use a 3rd party package called
+`purrr` which is a wrapper around these functions and makes them easier to use.
+Crazy right?
+
+
    using version control best example of this is several OOP packages, with no
    consensus which one should be used.
 4. Despite CRAN having many packages, the majority of them are very poorly
