@@ -193,11 +193,24 @@ Rstudio instead of R, and often do not even know the difference between the two.
 Same goes for git and GitHub, it is shocking how long it took me to explain the
 differences between the two to my colleagues at work.
 
+### Backward compatibility with S
+
+Although R is at version 4, it never had a major split like Python 2 and Python
+3 did. As a result of this, there are many features built into the language that
+maintain feature consistency with language called S, a proprietary language from
+Bell Labs, which R is based on. In my opinion, S was far from a perfect language
+and it definitely wasn't the best thing that came from Bell Labs. Because some
+of these features are still in R, it makes the language very hard to use and
+they make little sense to people in 2024. There even was a [meme account][10] on
+Twitter that made fun of these features.
+
+
+1. The user base has close to 0 knowledge about SWE, good coding practices and
    using version control best example of this is several OOP packages, with no
    consensus which one should be used.
-4. Despite CRAN having many packages, the majority of them are very poorly
+2. Despite CRAN having many packages, the majority of them are very poorly
    written and barely usable and not very well maintained
-5. The entire ecosystem has been hijacked by one company:
+3. The entire ecosystem has been hijacked by one company:
 
      - and this company appears to be pivoting into Python (first by making R
        tools work better with R but it is likely they will abandon R altogether,
