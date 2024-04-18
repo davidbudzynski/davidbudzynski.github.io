@@ -177,6 +177,22 @@ depending on what you want to achieve, or you can use a 3rd party package called
 Crazy right?
 
 
+### R users are not software engineers
+
+Something also has to be said about the target audience and average users of R.
+Many institutions and companies use R because it is free and gets the job done.
+What I mean by that is that it is either used as a tool that teaches you to
+implement and use statistics or it is used as a tool that allows you to leverage
+statistics to achieve something you want. In both cases, the user base has close
+to zero knowledge about software engineering, good coding practices and using
+version control. Many R users are not even aware that there are tools that can
+help them write better code, like linters, formatters, etc. This is why many R
+packages are very poorly written and barely usable and not very well maintained.
+That is why there are many [threads on StackOverflow][11] that ask for help with
+Rstudio instead of R, and often do not even know the difference between the two.
+Same goes for git and GitHub, it is shocking how long it took me to explain the
+differences between the two to my colleagues at work.
+
    using version control best example of this is several OOP packages, with no
    consensus which one should be used.
 4. Despite CRAN having many packages, the majority of them are very poorly
