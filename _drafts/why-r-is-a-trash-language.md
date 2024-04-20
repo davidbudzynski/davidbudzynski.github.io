@@ -266,15 +266,46 @@ about an average R user, you can imagine how bad the code can get.
 
 ### One company hijacking the ecosystem
 
-The entire ecosystem has been hijacked by one company:
-     - and this company appears to be pivoting into Python (first by making R
-       tools work better with R but it is likely they will abandon R altogether,
-       they appear to be sponsoring Python focused packages and they probably see
-       that they make the most money from putting Python into production through
-       their tools so this works for them)
-     - Other than individual voices stating that their packages suck there
-       appears to be zero resistance against them (because basic user of R
-       doesn't even understand what dependencies are)
+If you rewind back to late 2000s and early 2010s, you will see that R was a very
+tiny community. It was simpler times when statisticians did not call themselves
+data scientists. A company called RStudio came along and made a very good IDE.
+Along with it came several packages like ggplot2 that made R very popular. Those
+prominent people in the community joined RStudio and they started making more
+tools and packages for R. Over the course of years they created a lot of
+packages and one meta-package the Tidyverse. Unfortunately, the IDE hasn't been
+getting better and better and those many packages were dependent on each other
+making everything bloated. Many new people who are new to R did not make a fuss
+about that and many established R contributors did but because of slow paced
+development of the base R, Tidyverse packages became insanely popular, creating
+a schism between writing base R code and a Tidyverse-friendly equivalent (based
+on piping the data from one function to another).
+
+This is quite a unique position a language can find itself in. The standard way
+defined by using the standard library gets rejected over a 3rd party solution
+that is based on hundreds of many different dependencies. Many people do not
+care about those when working on one-off analyses, but once you move to
+production and want a stable environment, dealing with them becomes difficult to
+manage.
+
+In 2022 Rstudio rebranded themselves as Posit, giving reasons that they also
+want to focus on Python as well as R, and the old name was confusing. Many
+people were concerned that this probably means that they will want to pivot
+themselves from R to Python as this is the language of data science now. They
+obviously denied it it needs to be said that their departure from R to Python
+can be seen in the number of latest RStudio IDE releases and R package releases.
+On top of it, they layed off the creator or RMarkdown after trying to move
+people to Quarto, which is a more language agnostic platform leveraging similar
+technologies.
+
+It appears that they want to diminish their activity within the open-source R
+community and focus more on Python in production because this is where the money
+is. This is quite transparent when you look where their promotion and funding
+goes to. They sponsor Python related podcasts like Talk Python to Me, but I
+can't say that they do the same with the only R related podcasts which is R
+Weekly Highlights. It remains to be seen where they end up being in a couple of
+years but my impression is that they will stay engaged with R but to a much
+lesser extent.
+
 
 ### R package quality
 
