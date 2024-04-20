@@ -318,15 +318,28 @@ you know what they do if you didn't know them already?
 
 ### Outdated packaging system
 
-1. CRAN does not provide binaries on Linux, so you need to compile everything
-   from source
-2. the entire process of submitting a package undergoes a human review, your
-   package needs to compile on some v old architectures like Solaris
-3. There are competing 3rd party package "marketplaces": ROpenSci, Posit Package
-   Manager, GitHub
-4. It is impossible to ensure reproducibility without resorting to half baked
-   3rd party packages (renv, groundhog) and even they can't guarantee it, so you
-   need to use Docker
+CRAN is the official package repository for R. At the time of its creation, it
+was a very good idea, but it has not aged well. The process of submitting a
+package is very tedious and it takes a long time. Same goes for maintenance of
+those packages. Sometimes CRAN maintainers will ask you to make changes to your
+package because they made changes to their infrastructure and your package is
+not compatible. On top of this, CRAN does not provide binaries on Linux, so you
+need to compile them from source, which sometimes takes a lot of time and
+resources. 
+
+There are competing 3rd party package "marketplaces" like ROpenSci, Posit
+Package Manager, GitHub. They are much easier to use and they are much faster
+than CRAN when it comes to submitting a package. Some of them even provide Linux
+binaries, so they are a good alternative to CRAN.
+
+All of these package managers have the same problem which is inherent to R. It
+is impossible to ensure reproducibility without resorting to half baked 3rd
+party packages like `renv` and/or `groundhog` and even they can't guarantee it.
+Because of this, the only way to ensure reproducibility is to use Docker images.
+This is also a problem with Python as well, but people using Python don't have
+issues with it because they are more likely to be software engineers and they
+know how to write good code. On the other hand, an average R user haven't heard
+about Docker.
 
 ## Alternatives to R
 
