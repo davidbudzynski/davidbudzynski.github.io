@@ -209,7 +209,7 @@ That is why there are many [threads on StackOverflow][11] that ask for help with
 Rstudio instead of R, and often do not even know the difference between the two.
 Same goes for git and GitHub, it is shocking how long it took me to explain the
 differences between the two to my colleagues at work and they still get it wrong
-when speaking to Software Engineers. 
+when speaking to Software Engineers.
 
 I think that the greatest example showing bad language design and a subpar user
 base is the implementation of object oriented programming (OOP) in R. There is a
@@ -325,7 +325,7 @@ those packages. Sometimes CRAN maintainers will ask you to make changes to your
 package because they made changes to their infrastructure and your package is
 not compatible. On top of this, CRAN does not provide binaries on Linux, so you
 need to compile them from source, which sometimes takes a lot of time and
-resources. 
+resources.
 
 There are competing 3rd party package "marketplaces" like ROpenSci, Posit
 Package Manager, GitHub. They are much easier to use and they are much faster
