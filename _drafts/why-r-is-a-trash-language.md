@@ -179,7 +179,7 @@ Crazy right?
 
 ### R users are not software engineers
 
-Something also has to be said about the target audience and average users of R.
+Something also has to be said about the target audience, average users of R.
 Many institutions and companies use R because it is free and gets the job done.
 What I mean by that is that it is either used as a tool that teaches you to
 implement and use statistics or it is used as a tool that allows you to leverage
@@ -191,7 +191,8 @@ packages are very poorly written and barely usable and not very well maintained.
 That is why there are many [threads on StackOverflow][11] that ask for help with
 Rstudio instead of R, and often do not even know the difference between the two.
 Same goes for git and GitHub, it is shocking how long it took me to explain the
-differences between the two to my colleagues at work.
+differences between the two to my colleagues at work and they still get it wrong
+when speaking to Software Engineers.
 
 ### Backward compatibility with S
 
