@@ -177,6 +177,24 @@ depending on what you want to achieve, or you can use a 3rd party package called
 Crazy right?
 
 
+
+### Backward compatibility with S
+
+Although R is at version 4, it never had a major split like Python 2 and Python
+3 did. As a result of this, there are many features built into the language that
+maintain feature consistency with language called S, a proprietary language from
+Bell Labs, which R is based on. In my opinion, S was far from a perfect language
+and it definitely wasn't the best thing that came from Bell Labs. Because some
+of these features are still in R, it makes the language very hard to use and
+they make little sense to people in 2024. There even was a [meme account][10] on
+Twitter that made fun of these features.
+
+3. It gives the academia ivory tower vibes (bunch of academics developing the
+   core language, not interacting with outside users, users mainly also in
+   academia, not interested in contributing, students forced to use the language
+   also not inclined to get involved in helping developing the language).
+
+
 ### R users are not software engineers
 
 Something also has to be said about the target audience, average users of R.
@@ -192,43 +210,52 @@ That is why there are many [threads on StackOverflow][11] that ask for help with
 Rstudio instead of R, and often do not even know the difference between the two.
 Same goes for git and GitHub, it is shocking how long it took me to explain the
 differences between the two to my colleagues at work and they still get it wrong
-when speaking to Software Engineers.
+when speaking to Software Engineers. 
 
-### Backward compatibility with S
+I think that the greatest example showing bad language design and a subpar user
+base is the implementation of object oriented programming (OOP) in R. There is a
+base class called `S3` that is very easy to use, but it is very hard to write
+good code with it. There is also a base class called `S4` that is very hard to
+use, but it is very easy to write good code with it. To make things worse, there
+are several 3rd party packages that implement OOP in R, like `R6`, and
+even they can't get it right because Posit's `R6` is going to be abandoned in
+favor of Posit's `R7`. When I say abandoned, I don't mean that it won't be
+supported at all but with small usage base and limited resources you can't
+expect that it will be maintained as well as it should be.
 
-Although R is at version 4, it never had a major split like Python 2 and Python
-3 did. As a result of this, there are many features built into the language that
-maintain feature consistency with language called S, a proprietary language from
-Bell Labs, which R is based on. In my opinion, S was far from a perfect language
-and it definitely wasn't the best thing that came from Bell Labs. Because some
-of these features are still in R, it makes the language very hard to use and
-they make little sense to people in 2024. There even was a [meme account][10] on
-Twitter that made fun of these features.
+No consensus on which OOP package should be used makes it hard to write good
+large scale code in R. When you contrast this with Python, there is only
+one way to do OOP.
 
-1. The user base has close to 0 knowledge about SWE, good coding practices and
-   using version control best example of this is several OOP packages, with no
-   consensus which one should be used.
-2. Despite CRAN having many packages, the majority of them are very poorly
-   written and barely usable and not very well maintained
-3. The entire ecosystem has been hijacked by one company:
+### Poor quality development tools
 
+RStudio sucks and isn't a serious IDE, ESS, VScode or Vim aren't much better.
+
+no good code formatting, lsp, poor tree sitter support. 
+
+
+### One company hijacking the ecosystem
+
+The entire ecosystem has been hijacked by one company:
      - and this company appears to be pivoting into Python (first by making R
        tools work better with R but it is likely they will abandon R altogether,
        they appear to be sponsoring Python focused packages and they probably see
        that they make the most money from putting Python into production through
        their tools so this works for them)
-     - RStudio sucks and isn't a serious IDE
      - Other than individual voices stating that their packages suck there
        appears to be zero resistance against them (because basic user of R
        doesn't even understand what dependencies are)
-4. It gives the academia ivory tower vibes (bunch of academics developing the
-   core language, not interacting with outside users, users mainly also in
-   academia, not interested in contributing, students forced to use the language
-   also not inclined to get involved in helping developing the language).
-5. Hard to find any help because packages contain stupid puns containing the
+
+### R package quality
+
+1. Despite CRAN having many packages, the majority of them are very poorly
+   written and barely usable and not very well maintained
+
+
+4. Hard to find any help because packages contain stupid puns containing the
    letter R and the one letter name doesn't seem to help with searching for help
    on google.
-6. The language lack many basic tools like good code formatting, linting, etc.
+5. The language lack many basic tools like good code formatting, linting, etc.
 
 ### Outdated packaging system
 
@@ -242,9 +269,30 @@ Twitter that made fun of these features.
    3rd party packages (renv, groundhog) and even they can't guarantee it, so you
    need to use Docker
 
-### Alternatives
+## Alternatives to R
 
-Python and C++
+1. Python has become a de facto language for data science, it is much more
+   versatile and has a much larger user base, so it is much easier to find help
+   and resources.
+2  It is much easier to write good code in Python.
+3. any LLMs are implemented in Python, so if you want to use them, you need to
+   use Python
+4. Even though Python is not as good as R for statistics, it is good enough for
+   most use cases
+5. Python is quite fast,thanks to C and C++ libraries and more recently Rust. 
+6. If you want to write tools for python or you are interested in HPC and
+   machine learning in general, C++ is still king.
+7. Python and C++ compliment each other very well, so you can use Python for
+   data manipulation and C++ for heavy lifting
+
+### Conclusion
+
+If you want to become a data scientist, there is very little reason to learn R.
+
+Learn Python first and if you need antyhing that Python can't do but R can, use
+LLMs like chatGPT to write the code for you. Once you go deeper than fiddling
+with spreadsheets and speed, memory usage, and type safety start to matter, you
+can learn C++.
 
 [1]: https://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 [2]: https://www.hendrik-erz.de/post/a-rant
