@@ -183,7 +183,6 @@ an archaic way of communication. This makes it very hard to get involved in the
 core community. Many of those core contributors are also academics, so the whole
 process of getting involved in the community gives off ivory tower vibes.
 
-
 ### Backward compatibility with S
 
 Although R is at version 4, it never had a major split like Python 2 and Python
@@ -229,12 +228,41 @@ one way to do OOP.
 
 ### Poor quality development tools
 
-It is difficult to google for help because the language is called R so you get a
-lot of irrelevant results.
+One of the most important tools for a software developer is the search engine.
+When you are stuck on a problem, you can just google it and you will find the
+answer if your searching skills are good enough. This is often not the case with
+R. The reason behind is that the language is called R, so you get a lot of false
+results or references to Reddit, because each community there starts with `r/`.
+This is a small gripe, but it is a very annoying one, and I would say it is a
+large obstacle for beginners, judging from the number of times junior
+statisticians came to me asking questions that could be done with a little bit
+of searching on Google.
 
-RStudio sucks and isn't a serious IDE, ESS, VScode or Vim aren't much better.
+The second most important tool for a software developer is the IDE. RStudio is
+the most widely used one for R and it is shockingly bad. It is very slow, has
+limited support for 3rd party plugins, it uses a fair amount of memory. *It does
+not support LSP*. Up until not too long ago it didn't have an option to store
+settings in a file, so every time you wanted to use a new machine you had to set
+up everything from scratch. Although it is open source, it is not very easy to
+contribute to it, as the development is done by a company that also offers
+closed source products build on top of the open source core.
 
-no good code formatting, lsp, poor tree sitter support.
+To be completely fair, there are other IDEs that you can use for R but they
+aren't much better or have different set of problems. For example, ESS is a
+package for Emacs that is very powerful but it is very hard to use and it is not
+very user friendly. The development cycle of the package moves at a snail pace
+and there are many bugs that remain unfixed at the time of writing this post.
+VScode is a very good IDE for many languages, but it is not very good for R.
+(Neo)Vim is a very good text editor, but it is not very good for R.
+
+The overall quality of the development tools for R is very poor, compared to
+other languages like Python, C++, Java, etc. There is only one code formatter
+that kind of works, but it doesn't cover all edge cases are is quite slow
+because it was written in R itself, the LSP support in the most popular IDE is
+nonexistent and so is tree sitter support. This makes it very hard to write good
+code as a team because everyone is doing their own thing and you end up with the
+code being written in many different styles, and if you remember what I wrote
+about an average R user, you can imagine how bad the code can get.
 
 ### One company hijacking the ecosystem
 
