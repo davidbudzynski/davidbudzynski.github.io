@@ -159,11 +159,11 @@ packages that are not available in other languages.
 One of the major problems with R is that it was designed by statisticians for
 statisticians. This means that it is very good at doing statistics, but it is
 not good at being a programming language. The language makers chose some very
-interesing design choices like keeping function names inconsistent. For example,
-some functions use underscores, some use dots, some use camel case, some use
-Pascal case. For example there is `read.csv()` to read a CSV file, but if you want
-to read the binary version of the object with the `.Rds` extension, you need to
-use `readRDS()`.
+interesting design choices like keeping function names inconsistent. For
+example, some functions use underscores, some use dots, some use camel case,
+some use Pascal case. For example there is `read.csv()` to read a CSV file, but
+if you want to read the binary version of the object with the `.Rds` extension,
+you need to use `readRDS()`.
 
 Another example is the `apply()` function. It is a very powerful function that
 allows for functional programming in R, but it is very hard to use. It is very
