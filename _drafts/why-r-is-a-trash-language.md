@@ -176,6 +176,12 @@ depending on what you want to achieve, or you can use a 3rd party package called
 `purrr` which is a wrapper around these functions and makes them easier to use.
 Crazy right?
 
+R developers appear to be a fairly small group of people who are not very open
+to the work that they do or new ideas. The only reason to find what they are
+working on is to follow the mailing list, which for many younger developers is
+an archaic way of communication. This makes it very hard to get involved in the
+core community. Many of those core contributors are also academics, so the whole
+process of getting involved in the community gives off ivory tower vibes.
 
 
 ### Backward compatibility with S
@@ -188,12 +194,6 @@ and it definitely wasn't the best thing that came from Bell Labs. Because some
 of these features are still in R, it makes the language very hard to use and
 they make little sense to people in 2024. There even was a [meme account][10] on
 Twitter that made fun of these features.
-
-3. It gives the academia ivory tower vibes (bunch of academics developing the
-   core language, not interacting with outside users, users mainly also in
-   academia, not interested in contributing, students forced to use the language
-   also not inclined to get involved in helping developing the language).
-
 
 ### R users are not software engineers
 
@@ -229,13 +229,12 @@ one way to do OOP.
 
 ### Poor quality development tools
 
-It is difficult to google for help because the language is called R so you get a lot of irrelevant results.
+It is difficult to google for help because the language is called R so you get a
+lot of irrelevant results.
 
 RStudio sucks and isn't a serious IDE, ESS, VScode or Vim aren't much better.
 
-no good code formatting, lsp, poor tree sitter support. 
-
-
+no good code formatting, lsp, poor tree sitter support.
 
 ### One company hijacking the ecosystem
 
@@ -253,8 +252,6 @@ The entire ecosystem has been hijacked by one company:
 
 1. Despite CRAN having many packages, the majority of them are very poorly
    written and barely usable and not very well maintained
-
-
 4. Hard to find any help because packages contain stupid puns containing the
    letter R and the one letter name doesn't seem to help with searching for help
    on google.
@@ -292,7 +289,7 @@ The entire ecosystem has been hijacked by one company:
 
 If you want to become a data scientist, there is very little reason to learn R.
 
-Learn Python first and if you need antyhing that Python can't do but R can, use
+Learn Python first and if you need anything that Python can't do but R can, use
 LLMs like chatGPT to write the code for you. Once you go deeper than fiddling
 with spreadsheets and speed, memory usage, and type safety start to matter, you
 can learn C++.
