@@ -229,9 +229,12 @@ one way to do OOP.
 
 ### Poor quality development tools
 
+It is difficult to google for help because the language is called R so you get a lot of irrelevant results.
+
 RStudio sucks and isn't a serious IDE, ESS, VScode or Vim aren't much better.
 
 no good code formatting, lsp, poor tree sitter support. 
+
 
 
 ### One company hijacking the ecosystem
