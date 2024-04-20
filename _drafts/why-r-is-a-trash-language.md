@@ -1,7 +1,7 @@
 ---
 layout : post
 title  : "R is a Terrible Programming Language"
-date   : 2024-02-21 19:00
+date   : 2024-04-20 13:05
 tags   : [R, Software, Data Science] 
 ---
 
@@ -306,7 +306,7 @@ Weekly Highlights. It remains to be seen where they end up being in a couple of
 years but my impression is that they will stay engaged with R but to a much
 lesser extent.
 
-### R package quality
+### Poor quality packages
 
 Despite R having many packages, the majority of them are very poorly written and
 barely usable and not very well maintained. This is because many R users are not
@@ -356,7 +356,7 @@ machine learning in general, C++ is still king. Python and C++ compliment each
 other very well, so you can use Python for data manipulation and C++ for heavy
 lifting.
 
-### Conclusion
+## Conclusions
 
 If you are planning to learn R, I would advise against it. There are not many
 reasons to learn R if you want to be a data scientist. Learn Python first and if
@@ -370,7 +370,6 @@ you will have much deeper understanding of how computers work and how to write
 good code. Python on the other hand is very easy and it will allow you to
 abstract these low level details and focus on the problem you are trying to
 solve.
-
 
 [1]: https://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 [2]: https://www.hendrik-erz.de/post/a-rant
