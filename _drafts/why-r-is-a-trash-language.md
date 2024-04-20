@@ -306,15 +306,15 @@ Weekly Highlights. It remains to be seen where they end up being in a couple of
 years but my impression is that they will stay engaged with R but to a much
 lesser extent.
 
-
 ### R package quality
 
-1. Despite CRAN having many packages, the majority of them are very poorly
-   written and barely usable and not very well maintained
-4. Hard to find any help because packages contain stupid puns containing the
-   letter R and the one letter name doesn't seem to help with searching for help
-   on google.
-5. The language lack many basic tools like good code formatting, linting, etc.
+Despite R having many packages, the majority of them are very poorly written and
+barely usable and not very well maintained. This is because many R users are not
+software engineers and they do not know how to write good code. Another annoying
+thing is that many packages contain stupid puns containing the letter R in it.
+Searching for such packages is very hard because they often don't explain what
+they actually do and are hard to discover. Think about `dplyr` or `purrr`. Would
+you know what they do if you didn't know them already?
 
 ### Outdated packaging system
 
