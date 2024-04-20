@@ -205,7 +205,6 @@ of these features are still in R, it makes the language very hard to use and
 they make little sense to people in 2024. There even was a [meme account][10] on
 Twitter that made fun of these features.
 
-
 1. The user base has close to 0 knowledge about SWE, good coding practices and
    using version control best example of this is several OOP packages, with no
    consensus which one should be used.
