@@ -343,28 +343,34 @@ about Docker.
 
 ## Alternatives to R
 
-1. Python has become a de facto language for data science, it is much more
-   versatile and has a much larger user base, so it is much easier to find help
-   and resources.
-2  It is much easier to write good code in Python.
-3. any LLMs are implemented in Python, so if you want to use them, you need to
-   use Python
-4. Even though Python is not as good as R for statistics, it is good enough for
-   most use cases
-5. Python is quite fast,thanks to C and C++ libraries and more recently Rust. 
-6. If you want to write tools for python or you are interested in HPC and
-   machine learning in general, C++ is still king.
-7. Python and C++ compliment each other very well, so you can use Python for
-   data manipulation and C++ for heavy lifting
+So with all of these issues that I mentioned earlier, what are the alternatives?
+Well, there is no perfect solution to this problem. The de facto language for
+data science is Python, but it has its own set of problems. It is much more
+versatile and has a much larger user base, so it is much easier to find help and
+resources. It is much easier to write good code in Python. Many LLMs are
+implemented in Python, so if you want to use them, you need to use Python. Even
+though Python is not as good as R for statistics, it is good enough for most use
+cases. Python is quite fast, thanks to C and C++ libraries and more recently
+Rust. If you want to write tools for Python or you are interested in HPC and
+machine learning in general, C++ is still king. Python and C++ compliment each
+other very well, so you can use Python for data manipulation and C++ for heavy
+lifting.
 
 ### Conclusion
 
-If you want to become a data scientist, there is very little reason to learn R.
+If you are planning to learn R, I would advise against it. There are not many
+reasons to learn R if you want to be a data scientist. Learn Python first and if
+you feel like you need to use a package from R that is not available in Python,
+you can use LLMs like chatGPT to write the code for you. Once you go deeper than
+fiddling with spreadsheets and databases and need true speed, low memory usage
+as well as good type safety, you can learn C++. The combination of Python and
+C++ is the best of both worlds and it is much better than R. C++ is a difficult
+language to learn but one you get over that hurdle and write some code in it,
+you will have much deeper understanding of how computers work and how to write
+good code. Python on the other hand is very easy and it will allow you to
+abstract these low level details and focus on the problem you are trying to
+solve.
 
-Learn Python first and if you need anything that Python can't do but R can, use
-LLMs like chatGPT to write the code for you. Once you go deeper than fiddling
-with spreadsheets and speed, memory usage, and type safety start to matter, you
-can learn C++.
 
 [1]: https://www.burns-stat.com/pages/Tutor/R_inferno.pdf
 [2]: https://www.hendrik-erz.de/post/a-rant
