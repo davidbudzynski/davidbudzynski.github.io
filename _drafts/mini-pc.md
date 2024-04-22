@@ -57,12 +57,13 @@ because it wasn't going to be used just by myself, but also by my fiancée.
 ### The setup
 
 I connected the mini PC to my TV using an HDMI cable. I also connected a USB
-dongle to a remote-like keyboard and touchpad combo. The Internet connection is
+dongle to a remote-like keyboard and trackpad combo. The Internet connection is
 provided by cable to one of two ethernet ports. There is WiFi6 and Bluetooth 5.2
 support but I don't use them.
 
-## desktop replacement options
+## Desktop replacement alternatives
 
-## ssf pcs
+
+### ssf pcs
 
 [1]: https://www.amazon.co.uk/Windows-3750H-TRIGKEY-S3-Graphics/dp/B09MFKZFYG
