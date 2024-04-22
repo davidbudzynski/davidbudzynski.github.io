@@ -38,6 +38,24 @@ than my old desktop PC. Essentially, it's a modern version of the my old Skylake
 processor, but with a much lower power consumption and modern features like
 quick sync and hardware decoding for 4k video.
 
+I wasn't sure if the Intel N100 would be powerful enough for my needs, but I
+thought that if I don't like it, I could always return it if I buy it from
+Amazon. I bought a [Trigkey G4][1] with 500GB of storage and 16GB of RAM (which
+is single channel) for around £150.
+
+INSERT IMAGE HERE
+
+I was pleasantly surprised by how well it performed. It was able to handle all
+the tasks I threw at it, including web browsing, video streaming, and
+downloading stuff in the background. For the most part it fairly quiet, so you
+could sleep beside it. The only time it gets loud is when you're installing
+something or running a heavy task. I was very happy with my purchase and decided
+to keep it. It came with Windows 11 preinstalled which I immediately replaced
+with Arch Linux and KDE Plasma. I decided for a regular desktop environment
+because it wasn't going to be used just by myself, but also by my fiancée.
+
 ## desktop replacement options
 
 ## ssf pcs
+
+[1]: https://www.amazon.co.uk/Windows-3750H-TRIGKEY-S3-Graphics/dp/B09MFKZFYG
