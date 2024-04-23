@@ -63,6 +63,15 @@ support but I don't use them.
 
 ## Desktop replacement alternatives
 
+If you're looking for a desktop replacement, there are some alternatives that
+come close to a full scale desktop PC. The first one is a Mac Mini or Mac
+Studio. It has to be said that they aren't cheap but you can spec them out to be
+quite powerful. I do not have a need for a Mac, so I wouldn't recommend them as
+they aren't great value for money. The second alternative is a mini PC with an
+AMD 8845HS 8 core processor or an older AMD 7940HS processor which is basically
+very close to the 8845HS. These chips are very powerful and can handle most
+things you throw at it. Of course, they won't be any good for machine learning
+or compiling massive projects, but they are great for everyday tasks.
 
 ### ssf pcs
 
