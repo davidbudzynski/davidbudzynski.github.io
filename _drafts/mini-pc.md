@@ -24,7 +24,6 @@ performance, low power machines. There is a wide variety of mini PCs available
 in the market, ranging from low power consumption PCs ideal for server
 applications to high performance desktop replacements.
 
-
 ## Low power consumption pc
 
 I already have a spare desktop PC that I don't use anymore. It's a it's a nearly
@@ -77,5 +76,20 @@ There are also small form factor PCs that are a bit bigger than mini PCs but
 also more powerful. These are usually called small form factor PCs or SFF PCs.
 They require you to pick all the components yourself, but it seems like a the
 best alternative if you want a powerful gaming PC in a small form factor.
+Overall this isn't the most cost effective solution, but there are some
+cheap,good quality components available. I saw people building nice rigs with
+[S300 8L case][2] which looks really good, is very small and isn't overly
+expensive.
+
+### Mac Mini
+
+This month, Apple released a new Mac mini with an M4 chip. The base model is
+probably the best value for money Mac mini ever released and I would seriously
+consider it if I needed a Mac and was looking for a new computer. It's insanely
+small with built in power supply and is very powerful. You can probably also
+expect good support from Apple for the next 5-7 years, low fan noise and low
+power consumption. The only downside is that upgrading RAM or storage is very
+expensive.
 
 [1]: https://www.amazon.co.uk/Windows-3750H-TRIGKEY-S3-Graphics/dp/B09MFKZFYG
+[2]: https://amzn.eu/d/dQqLM3p
