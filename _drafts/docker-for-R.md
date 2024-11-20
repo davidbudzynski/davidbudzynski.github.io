@@ -2,7 +2,7 @@
 layout : post
 title  : "Docker for R projects"
 date   : 2024-03-13 18:00
-tags   :
+tags   : [R, Docker, Reproducibility, software]
 ---
 
 For years, R users have been known for their knack for analytical thinking, not
