@@ -43,8 +43,6 @@ thought that if I don't like it, I could always return it if I buy it from
 Amazon. I bought a [Trigkey G4][1] with 500GB of storage and 16GB of RAM (which
 is single channel) for around £150.
 
-INSERT IMAGE HERE
-
 I was pleasantly surprised by how well it performed. It was able to handle all
 the tasks I threw at it, including web browsing, video streaming, and
 downloading stuff in the background. For the most part it fairly quiet, so you
@@ -74,5 +72,10 @@ things you throw at it. Of course, they won't be any good for machine learning
 or compiling massive projects, but they are great for everyday tasks.
 
 ### ssf pcs
+
+There are also small form factor PCs that are a bit bigger than mini PCs but
+also more powerful. These are usually called small form factor PCs or SFF PCs.
+They require you to pick all the components yourself, but it seems like a the
+best alternative if you want a powerful gaming PC in a small form factor.
 
 [1]: https://www.amazon.co.uk/Windows-3750H-TRIGKEY-S3-Graphics/dp/B09MFKZFYG
