@@ -1,7 +1,7 @@
 ---
 layout : post
 title  : "Docker for R projects"
-date   : 2024-03-13 18:00
+date   : 2024-11-20 18:08
 tags   : [R, Docker, Reproducibility, software]
 ---
 
