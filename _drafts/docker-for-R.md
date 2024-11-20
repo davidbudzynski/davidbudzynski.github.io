@@ -129,3 +129,34 @@ RUN R -e "rio::install_formats()"
 # RUN Rscript file.R
 ```
 
+### Step 3: Build Your Docker Image
+
+In your terminal, navigate to the directory containing the Dockerfile and run:
+
+```bash
+docker build -t my-r-project .
+```
+
+This command creates a Docker image named my-r-project, containing your R environment and scripts.
+
+### Step 4: Run the Container
+
+Run your container with:
+
+```bash
+docker run -it my-r-project
+```
+
+This starts a container where your R script will execute exactly as defined.
+
+### Step 5: Explore all the possibilities
+
+Docker is a powerful tool with many features and integrations. There are many smart people out there who created nice base images and scripts to help you get started. The Rocker project is a great place to start, but you can also explore other images and scripts on GitHub. 
+
+Additionally, you should read [Building reproducible analytical pipelines with R](https://raps-with-r.dev/) by Bruno Rodrigues. He goes into more detail about how to use Docker for R projects and how to create a reproducible workflow. I have my own [small setup](https://github.com/davidbudzynski/R-project-bootstrap) which uses Makefiles to build the Docker image and run the container. This way I can easily share the project with others and ensure that the environment is the same for everyone. The most important thing is to start and learn as you go. Once you keep using docker, you will see the benefits and how it can help you in your daily work.
+
+## Closing thoughts
+
+Docker might seem like a tool for "techies," but it’s actually a powerful ally for R users. By taking the guesswork out of environment management and enabling seamless collaboration, Docker helps you focus on what really matters: your data and analysis.
+
+So, whether you’re an academic researcher, data scientist, or educator, give Docker a try. You don’t have to be a tech expert—just a curious problem-solver looking for better ways to work. With Docker, your R projects will be more reproducible, portable, and future-proof than ever before.
