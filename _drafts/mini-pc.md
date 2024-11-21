@@ -1,6 +1,6 @@
 ---
 layout : post
-title  :  "Mini PC: A Powerful, Portable, and Affordable Computing Solution"
+title  :  "Mini PC: a viable desktop replacement in 2024"
 date   :   2024-02-21 19:00
 tags   : [Hardware, Mini PC]
 ---
