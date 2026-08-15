@@ -2,7 +2,7 @@
 layout : post
 title  : "Program Spotlight: CLI File Managers (Yazi & Midnight Commander)"
 date   : 2024-11-17 17:00
-tags   : [software]
+tags   : [Software]
 ---
 
 While graphical file managers dominate desktop workflows, **command-line
