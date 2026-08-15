@@ -199,20 +199,72 @@ rclone copy /media/camera/DCIM ~/Pictures/Camera --max-age 7d
 Finally, for long overnight transfers, `--log-file` writes a log to a file
 instead of the console, so I can check in the morning exactly what happened.
 
-## From the card to the cloud
+## The full workflow
 
-The "cloud" tag on this article isn't an accident. The same command that
-reliably moves files from a camera card to your PC can then move them from your
-PC to the cloud, or even from the camera straight to the cloud:
+Putting it all together, my routine looks like this. First, copy everything
+from the card to my Pictures folder, verifying as I go:
 
 ```bash
-rclone copy /media/camera/DCIM remote:Photos/Camera
+rclone copy /media/camera/DCIM ~/Pictures/Camera --progress --checksum
 ```
 
-Once a remote is configured with `rclone config`, it behaves like any other
-filesystem, so every trick above — checksums, checking, filtering, resuming —
-works just the same. My workflow ends up being a single pipeline: card to PC,
-then PC to the cloud, both with the same tool.
+Then I confirm nothing was missed or corrupted:
+
+```bash
+rclone check /media/camera/DCIM ~/Pictures/Camera --checksum
+```
+
+Once the check passes, the card can be cleared. `move` transfers files and
+deletes them from the source in one go — running it now simply removes the
+files from the card, now that they're safely on disk:
+
+```bash
+rclone move /media/camera/DCIM ~/Pictures/Camera
+```
+
+Or you can just format the card in the camera. The important thing is that you
+only clear it after the check passes.
+
+Finally, the same command pushes the photos to the cloud, where they're backed
+up away from the house:
+
+```bash
+rclone copy ~/Pictures/Camera remote:Photos/Camera --progress --checksum
+```
+
+That's the whole pipeline: card to PC, PC to cloud, every step verified with
+the same tool and the same flags.
+
+## Browsing with rclone mount
+
+Sometimes I don't want to copy everything at once, or I just want to look at
+what's on the card before deciding. `rclone mount` turns a source into a normal
+filesystem that you can browse in any file manager:
+
+```bash
+mkdir -p ~/mnt/camera
+rclone mount /media/camera/DCIM ~/mnt/camera
+```
+
+Leave that running and the card shows up as a regular folder. The same trick
+works for cloud remotes, which is a nice way to browse cloud storage without
+installing a provider's app:
+
+```bash
+mkdir -p ~/mnt/photos
+rclone mount remote:Photos ~/mnt/photos
+```
+
+When you're done, unmount it:
+
+```bash
+fusermount -u ~/mnt/camera
+```
+
+One caveat: when you copy files out of a mount, you're back to regular file
+operations — no checksums, no atomic renames, none of the safety nets from
+earlier. I use mounts for browsing and poking around, but for the actual copy I
+always use the commands above.
 
 ## Conclusion
 
