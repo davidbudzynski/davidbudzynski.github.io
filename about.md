@@ -6,9 +6,10 @@ permalink: /about/
 
 Hi, I'm David Budzyński.
 
-I work with data — statistics, R (and increasingly Python), and the software
-around it. I care about reproducible workflows, boring technology that lasts,
-and my own privacy while doing all of the above.
+I work with data — statistics, R, and a lot of Python. I care about
+reproducible workflows, boring technology that lasts, and my own privacy while
+doing all of the above. I also like low-level languages and tinker with C++
+when I get the chance.
 
 This blog is where I write about the things I'm learning and using: my Linux
 setup, the tools I reach for day to day, data science workflows, self-hosted
