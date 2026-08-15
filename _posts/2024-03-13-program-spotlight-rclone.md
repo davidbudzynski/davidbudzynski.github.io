@@ -106,6 +106,32 @@ Or the opposite, skipping videos you've already pulled:
 rclone copy /media/camera/DCIM ~/Pictures/Camera --exclude "*.MP4"
 ```
 
+## Useful flags
+
+Rclone has a lot of flags, but these are the ones I reach for most when dealing
+with photos and videos:
+
+| Flag | What it does |
+|------|--------------|
+| `--progress` | Shows a live progress bar with per-file and overall stats. |
+| `--checksum` | Compares files by hash instead of just size and modification time. Slower but more thorough. |
+| `--ignore-existing` | Skips files that already exist in the destination, without even checking if they differ. Great for filling in gaps. |
+| `--size-only` | Compares files by size only. Handy when the modification times on the card aren't reliable. |
+| `--dry-run` | Shows what rclone would do without actually copying anything. Good for safely checking a new command. |
+| `--transfers` | Controls how many files are copied in parallel (default 4). Bump it up to speed through thousands of photos. |
+| `--retries` | How many times rclone retries a failed transfer per file (default 3). |
+| `--max-size` | Skips files larger than the given size, e.g. `--max-size 100M` to leave the big videos behind. |
+| `--min-size` | Skips files smaller than the given size. |
+| `--max-age` | Only copies files newer than the given age, e.g. `--max-age 7d`. |
+| `--log-file` | Writes a log to a file instead of the console. Handy for long overnight transfers. |
+
+Put together, a typical copy from my camera looks like this:
+
+```bash
+rclone copy /media/camera/DCIM ~/Pictures/Camera \
+    --progress --checksum --transfers 8 --retries 5
+```
+
 ## From the card to the cloud
 
 The "cloud" tag on this article isn't an accident. The same command that
