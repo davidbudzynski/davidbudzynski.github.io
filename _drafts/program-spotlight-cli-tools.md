@@ -1,7 +1,7 @@
 ---
 layout : post
 title  : "Program Spotlight: CLI tools I use daily"
-tags   : [software, CLI]
+tags   : [Software, CLI]
 ---
 
 Part of the Program Spotlight series (following rclone and file managers). Covers
