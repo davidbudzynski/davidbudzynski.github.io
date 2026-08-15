@@ -108,29 +108,65 @@ rclone copy /media/camera/DCIM ~/Pictures/Camera --exclude "*.MP4"
 
 ## Useful flags
 
-Rclone has a lot of flags, but these are the ones I reach for most when dealing
-with photos and videos:
+The basic command is a good start, but rclone really shines once you start
+combining its flags. Let's build up my typical camera copy step by step.
 
-| Flag | What it does |
-|------|--------------|
-| `--progress` | Shows a live progress bar with per-file and overall stats. |
-| `--checksum` | Compares files by hash instead of just size and modification time. Slower but more thorough. |
-| `--ignore-existing` | Skips files that already exist in the destination, without even checking if they differ. Great for filling in gaps. |
-| `--size-only` | Compares files by size only. Handy when the modification times on the card aren't reliable. |
-| `--dry-run` | Shows what rclone would do without actually copying anything. Good for safely checking a new command. |
-| `--transfers` | Controls how many files are copied in parallel (default 4). Bump it up to speed through thousands of photos. |
-| `--retries` | How many times rclone retries a failed transfer per file (default 3). |
-| `--max-size` | Skips files larger than the given size, e.g. `--max-size 100M` to leave the big videos behind. |
-| `--min-size` | Skips files smaller than the given size. |
-| `--max-age` | Only copies files newer than the given age, e.g. `--max-age 7d`. |
-| `--log-file` | Writes a log to a file instead of the console. Handy for long overnight transfers. |
+First, I want to see what's actually happening. `--progress` gives a live
+progress bar with per-file and overall stats:
 
-Put together, a typical copy from my camera looks like this:
+```bash
+rclone copy /media/camera/DCIM ~/Pictures/Camera --progress
+```
+
+Cameras and card readers aren't always reliable, so I also like to verify what
+got copied. By default rclone compares file size and modification time, but I
+can force it to compare actual hashes with `--checksum`. It's slower, but for a
+once-a-day copy it's worth the peace of mind:
+
+```bash
+rclone copy /media/camera/DCIM ~/Pictures/Camera --progress --checksum
+```
+
+Before committing to a new command, I always do a dry run. `--dry-run` shows
+exactly what rclone would do without touching a single file:
+
+```bash
+rclone copy /media/camera/DCIM ~/Pictures/Camera --dry-run
+```
+
+If the camera disconnected mid-transfer last time, `--ignore-existing` comes in
+handy. It skips files that already exist in the destination without even
+checking whether they differ, so you can fill in the gaps without re-reading
+the whole card. `--size-only` is a similar trick for when the modification
+times on the card aren't trustworthy.
+
+Copying a few thousand photos one by one is slow, so I bump up the parallelism
+with `--transfers`. The default is 4; on a decent machine 8 is fine. And if the
+connection drops, `--retries` controls how many times rclone retries a failed
+file before giving up (the default is 3):
 
 ```bash
 rclone copy /media/camera/DCIM ~/Pictures/Camera \
     --progress --checksum --transfers 8 --retries 5
 ```
+
+Sometimes I only want part of the card. `--max-size` skips files larger than a
+given size, which is a neat way to leave the big video files behind:
+
+```bash
+rclone copy /media/camera/DCIM ~/Pictures/Camera --max-size 100M
+```
+
+`--min-size` does the opposite, skipping files smaller than the limit. And if I
+want to grab only what was shot recently, `--max-age` copies just the files
+newer than a given age:
+
+```bash
+rclone copy /media/camera/DCIM ~/Pictures/Camera --max-age 7d
+```
+
+Finally, for long overnight transfers, `--log-file` writes a log to a file
+instead of the console, so I can check in the morning exactly what happened.
 
 ## From the card to the cloud
 
