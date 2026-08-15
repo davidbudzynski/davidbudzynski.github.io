@@ -27,8 +27,8 @@ Personal blog built with Jekyll (minima theme), deployed to GitHub Pages.
   `content(...)` and `polish(...)` types alongside `feat`/`fix`/`docs`/`chore`/`build`.
 - Create a branch for new work named `type/description` (e.g. `feat/article-drafts`)
   and merge to `master` when done.
-- Never add `Co-Authored-By` with yourself as co-author of the commit. Agents
-  cannot be authors, humans can be; agents are assistants.
+- Never add yourself as co-author of any contribution — commits, PRs, or
+  otherwise. Agents cannot be authors, humans can be; agents are assistants.
 
 ## Don't touch unless asked
 
