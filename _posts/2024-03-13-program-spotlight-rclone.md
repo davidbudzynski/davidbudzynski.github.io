@@ -1,7 +1,7 @@
 ---
 layout : post
 title  : "Program Spotlight: Rclone"
-date   : 2024-03-13 18:00
+date   : 2026-08-15 19:13
 tags   : [Software, backup, cloud, photography]
 ---
 
