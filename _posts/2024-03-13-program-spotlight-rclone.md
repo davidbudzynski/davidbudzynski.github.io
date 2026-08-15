@@ -36,6 +36,37 @@ transfer went fine.
 
 Rclone solves exactly this problem.
 
+## Why not just use `cp`, `mv`, or the file manager?
+
+Fair question. If you're comfortable in a terminal, `cp -r` or `mv` gets the
+job done, and the GUI file manager is right there too. So why bother with
+rclone?
+
+The short answer: those tools copy files, but they don't care about the
+outcome. When the source is a flaky camera card, that distinction matters.
+
+`cp` doesn't know what was already copied. Run it again and it re-copies
+everything, or with `-u` it compares modification times and still re-reads a
+lot of files. If the card disconnects halfway through, `cp` errors out and
+leaves a partial file behind — and it won't tell you that other files got
+silently truncated. It never verifies anything; it just copies.
+
+GUI file managers have the same problem under the hood. A dropped connection
+leaves partial files, there's no way to tell which files actually made it, and
+verifying "did everything copy correctly" is up to you squinting at file sizes.
+
+`rsync` is closer to what you want — it's resumable with `--partial`, can
+verify with `--checksum`, and skips files that are already there. If you only
+ever copy locally from a card reader, rsync is a perfectly good answer.
+
+What rclone adds on top is that it treats the camera the same way it treats a
+cloud remote. The exact same command that fills in the gaps after a dropped
+transfer, with the same flags, works when you point it at Google Drive instead
+of your card. And because rclone copies to a temporary file and renames it into
+place only when the transfer finishes, a partial file never survives a dropped
+connection. For me, that's the difference between "I hope it copied" and "I
+know it copied."
+
 ## Copying photos and videos with rclone
 
 The basic command is deceptively simple:
