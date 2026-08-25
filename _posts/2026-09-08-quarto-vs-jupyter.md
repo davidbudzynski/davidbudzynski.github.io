@@ -5,12 +5,13 @@ date   : 2026-09-08 10:00
 tags   : [Quarto, Jupyter, Reproducibility, Data Science]
 ---
 
-Some time ago I wrote about running [C++ notebooks in Emacs' Org mode][3]. The
-specific tool did not matter that much — the point I was circling around is that
-plain text is a great medium for mixing code, results, and prose. In this post I
-want to apply that same argument to everyday data science work and compare
-[Jupyter][2] notebooks with [Quarto][1] documents for anything that deserves to
-be called a *report*.
+Some time ago I wrote about running [C++ notebooks in Emacs' Org mode][3]. That
+post was about Org mode specifically, and the tool mattered a great deal — its
+literate programming support is what made it such a good fit. But there was a
+bigger point hiding underneath: plain text is a great medium for mixing code,
+results, and prose. In this post I want to apply that same argument to everyday
+data science work and compare [Jupyter][2] notebooks with [Quarto][1] documents
+for anything that deserves to be called a *report*.
 
 ## The notebook problem
 
