@@ -67,7 +67,11 @@ design decision fixes most of the problems above:
 
 This is the same idea Org mode has had for years, and the same idea behind
 literate programming going back decades: keep the source in plain text, treat
-the output as a build artifact.
+the output as a build artifact. Quarto did not appear out of nowhere, either —
+it is the successor to [R Markdown][4], built by the same team on top of
+[Pandoc][5] and the knitr engine, and generalized beyond R. If you have old
+`.Rmd` reports lying around, moving them over is mostly a matter of renaming
+and tidying the YAML header.
 
 ## It is not either/or
 
@@ -75,6 +79,13 @@ Here is the part that surprises people: Quarto is not tied to R. Its execution
 engine can be Jupyter itself, so you can keep writing Python with an ipykernel
 underneath and still get all the benefits above. You do not have to abandon the
 Python ecosystem to stop shipping `.ipynb` files.
+
+The boundary is porous in the other direction too. `quarto convert` turns a
+`.qmd` document into a Jupyter notebook (and back), and if even notebooks feel
+too heavy, Quarto will render a plain Python or R script as a document: cells
+are marked with ordinary comments, prose lives in block comments, and the file
+still runs as normal code. So you are never locked into a special format — the
+document can always be turned back into pure code with comments.
 
 The tools also answer different needs. Keep Jupyter (or a REPL) for
 exploration — the messy loop where you are not sure what you are looking for
@@ -93,3 +104,5 @@ they are just not the thing I hand over at the end.
 [1]: https://quarto.org/
 [2]: https://jupyter.org/
 [3]: https://davidbudzynski.github.io/2024/04/15/cpp-notebooks-org-mode.html
+[4]: https://rmarkdown.rstudio.com/
+[5]: https://pandoc.org/
