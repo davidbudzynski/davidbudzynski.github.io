@@ -1,6 +1,7 @@
 ---
 layout : post
 title  : "renv vs Docker: when to use each"
+date   : 2026-09-01 10:00
 tags   : [R, Docker, Reproducibility]
 ---
 
