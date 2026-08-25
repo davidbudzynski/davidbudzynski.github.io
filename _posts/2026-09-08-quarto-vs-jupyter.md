@@ -1,6 +1,7 @@
 ---
 layout : post
 title  : "Quarto for reproducible reports vs Jupyter"
+date   : 2026-09-08 10:00
 tags   : [Quarto, Jupyter, Reproducibility, Data Science]
 ---
 
