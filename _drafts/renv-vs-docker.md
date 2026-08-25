@@ -59,9 +59,17 @@ you *had*, but it does not install or manage R itself. It knows nothing about:
   the same machine, even with identical package versions.
 - **Tooling outside R** — pandoc and LaTeX versions used to render reports, or
   Python if your project mixes languages.
+- **Packages disappearing from CRAN** — a lockfile records versions, but it
+  cannot conjure the tarballs back. If a package (or that exact version) is
+  pulled from CRAN and you do not have it installed anywhere, `renv::restore()`
+  fails on that package. The usual workarounds are pointing renv at
+  [Posit Package Manager][3] date snapshots or the CRAN Archive, which keep old
+  versions downloadable — or relying on renv's local cache, which only helps on
+  machines where you happened to install the package before it vanished.
 
 So renv answers the question "which packages?", but it leaves "which machine?"
-unanswered.
+unanswered — and even its answer to "which packages?" assumes CRAN still has
+them.
 
 ## What Docker locks down
 
