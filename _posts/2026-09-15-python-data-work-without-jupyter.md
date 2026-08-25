@@ -1,6 +1,7 @@
 ---
 layout : post
 title  : "Writing Python for data work without Jupyter"
+date   : 2026-09-15 10:00
 tags   : [Python, Data Science]
 ---
 
