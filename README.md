@@ -8,8 +8,9 @@ Feel free to send PRs addressing typos, bad grammar, visual glitches, etc.
 ## License
 
 Site code and fenced code examples in posts are [GPLv3 or later](LICENSE.md).
-Post prose and images are © David Budzyński, all rights reserved — ask before
-sharing. See [LICENSE.md](LICENSE.md) for details.
+Post prose and images are © David Budzyński, shared under
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+See [LICENSE.md](LICENSE.md) for details.
 
 To run the site locally, you need to have Ruby installed (macOS and Linux are
 both supported). Then run the following commands:

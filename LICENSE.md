@@ -8,11 +8,13 @@ scripts, and configuration — and fenced code blocks inside blog posts are
 either version 3 of the License, or (at your option) any later version.
 The full text follows below.
 
-## Prose and images: all rights reserved
+## Prose and images: CC BY-NC-ND 4.0
 
 Blog post prose and images (`_posts/`, `_drafts/`, `assets/images/`) are
-© David Budzyński, all rights reserved. Do not reproduce, share, or adapt
-them without permission — ask via
+© David Budzyński and shared under
+[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/):
+you may share verbatim copies for non-commercial purposes with attribution,
+but do not adapt them or use them commercially without permission — ask via
 [GitHub](https://github.com/davidbudzynski) first.
 
 ---
