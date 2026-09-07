@@ -12,6 +12,8 @@ system administrators, and command-line enthusiasts. They offer unparalleled
 speed, flexibility, and efficiency, particularly in environments where graphical
 user interfaces are unavailable or unnecessary.
 
+<!--more-->
+
 Among the diverse options available, **Yazi** and **Midnight Commander (MC)**
 stand out as two of the most interesting choices for very different reasons. In
 this article, we’ll explore their features and delve into why **Midnight

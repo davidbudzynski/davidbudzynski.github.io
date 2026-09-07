@@ -11,6 +11,8 @@ language. Even though I have been using it for many years now, I have never been
 able to shake the feeling that apart from several nice packages, R is an
 inferior language.
 
+<!--more-->
+
 Over the years there have been many criticisms of R, some of them are valid,
 like the [R Inferno book][1], some of them are not, like many medium articles by
 freshman year data science students who just discovered Python and R. More

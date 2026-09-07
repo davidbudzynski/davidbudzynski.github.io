@@ -14,6 +14,8 @@ ggplots. But as the complexity of data science workflows has grown, the ability
 to manage environments, ensure reproducibility, and collaborate effectively has
 become critical. That’s where Docker comes in.
 
+<!--more-->
+
 At its core, Docker is a platform that helps you package and run applications in
 isolated environments called containers. A container is like a virtual box that
 holds everything your R project needs to run—R itself, libraries, system

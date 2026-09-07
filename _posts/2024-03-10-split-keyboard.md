@@ -21,6 +21,8 @@ about split keyboards before, but I had never really considered them. I thought
 that they would be very complicated to put together and too much trouble
 overall.
 
+<!--more-->
+
 I started to do some research and I found that there were many different types
 of split keyboards, some of them were very expensive and required many parts,
 and some of them were very cheap (relatively speaking), designed specifically to

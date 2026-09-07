@@ -12,6 +12,8 @@ Yesterday (that is on April 22, 2022) R 4.2.0 was released and among
 other things, this release brought major improvements when using the
 native pipe operator (`|>`).
 
+<!--more-->
+
 You might be wondering: what is the native pipe anyways? Well, it's the
 base equivalent of `%>%` pipe from the `magrittr` package, heavily
 endorsed and used across `tidyverse` packages. It pipes a value forward

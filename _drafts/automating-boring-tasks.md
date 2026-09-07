@@ -6,3 +6,5 @@ tags   : [Linux, Shell, Tooling]
 
 How I stop repeating myself: scripts and Makefiles for the chores that used to
 waste my time.
+
+<!--more-->

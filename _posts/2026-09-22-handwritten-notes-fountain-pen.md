@@ -11,6 +11,8 @@ out four pages of transcript-flavoured "notes" nobody will ever read. I go the
 other way: a fountain pen, decent ink, good paper, and two thirds of a page
 that is actually useful.
 
+<!--more-->
+
 This comes from a long-time Org mode user, not a pen-and-paper romantic. For
 many years I kept my work notes in Org mode and I still think it is great. But
 after moving jobs I ran into the usual corporate friction: different

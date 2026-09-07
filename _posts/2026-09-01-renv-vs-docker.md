@@ -14,6 +14,8 @@ problem, and knowing which half you need saves a lot of frustration. In this
 post I want to compare the two tools directly and give some practical guidance
 on when each is the right choice.
 
+<!--more-->
+
 ## What renv locks down
 
 renv works at the **package level**. It gives every project its own private

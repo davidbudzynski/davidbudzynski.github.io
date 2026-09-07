@@ -12,6 +12,8 @@ to and from cloud storage, often described as "rsync for cloud storage". It
 supports dozens of providers like Google Drive, OneDrive, Dropbox, and
 S3-compatible storage.
 
+<!--more-->
+
 But my favourite use case for rclone has nothing to do with the cloud at all.
 It's copying photos and videos from a camera to my computer — and doing it
 reliably, which a simple drag and drop often isn't.

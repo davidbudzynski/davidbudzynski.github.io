@@ -6,3 +6,5 @@ tags   : [AI, Software, Tooling]
 
 A grounded introduction to agentic coding: what the tools actually do, their
 limits, and the hype vs. reality.
+
+<!--more-->

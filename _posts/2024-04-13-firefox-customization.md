@@ -19,6 +19,8 @@ Fast forward to 2024, and Firefox's usage has been declining for years and years
 and its users are often seen as a dying breed. But I still use Firefox as my
 default browser. Why?
 
+<!--more-->
+
 ## Customization
 
 Firefox is still the most customizable browser out there. You can change almost

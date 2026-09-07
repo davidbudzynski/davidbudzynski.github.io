@@ -6,3 +6,5 @@ tags   : [Self-hosting, Privacy]
 
 Paperless-ngx as a gateway into self-hosting: the setup, the payoff, and what
 came after.
+
+<!--more-->

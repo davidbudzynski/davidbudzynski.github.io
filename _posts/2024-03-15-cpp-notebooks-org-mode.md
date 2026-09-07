@@ -12,6 +12,8 @@ inside notebooks. I thought to myself that org mode could be a good tool for
 this, as it can compile the code and put the output right next to it in an HTML
 or PDF format.
 
+<!--more-->
+
 ## What is Org Mode
 
 [Org mode][1] is a major mode for [GNU Emacs][2]. It is used for keeping notes,

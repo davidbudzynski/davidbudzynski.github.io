@@ -21,6 +21,8 @@ I was happy, although I became more aware about embedded telemetry and privacy
 concerns expressed by other people on the Internet around the time when Windows
 10 was announced.
 
+<!--more-->
+
 Around that time I also bought my first iPhone and I immediately fell in love
 with it. I decided to try out one of the iMacs in the university library and I
 decided to give a hackintosh route a try. Somehow I managed to get it installed
