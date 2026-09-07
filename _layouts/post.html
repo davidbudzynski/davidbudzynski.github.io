@@ -50,13 +50,13 @@ layout: default
   <nav class="post-nav" aria-label="Post navigation">
     <div>
       {% if page.previous %}
-      <span>← Newer:</span>
+      <span>← Older:</span>
       <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title | escape }}</a>
       {% endif %}
     </div>
     <div>
       {% if page.next %}
-      <span>Older: →</span>
+      <span>Newer →:</span>
       <a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }}</a>
       {% endif %}
     </div>

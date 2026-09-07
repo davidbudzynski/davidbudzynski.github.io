@@ -286,6 +286,12 @@ class LayoutsTest(unittest.TestCase):
         text = read(os.path.join(ROOT, "_layouts", "post.html"))
         self.assertIn("page.previous", text)
         self.assertIn("page.next", text)
+        # Jekyll: site.posts is newest-first, so previous == older post,
+        # next == newer post. Labels must match that order.
+        prev_block = text.split("page.previous")[1].split("endif")[0]
+        self.assertIn("Older", prev_block)
+        next_block = text.split("page.next")[1].split("endif")[0]
+        self.assertIn("Newer", next_block)
         self.assertIn("Related posts", text)
         self.assertIn('include utterances.html issue-term="pathname"', text)
         self.assertNotIn("prepend: 'Comments:", text)
