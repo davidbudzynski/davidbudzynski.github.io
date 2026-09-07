@@ -3,6 +3,7 @@ layout : post
 title  : "Why I still write by hand"
 date   : 2026-09-22 10:00
 tags   : [Productivity, Writing, Tooling]
+description: "In a world of AI meeting transcripts nobody reads, why a fountain pen and two-thirds of a page still wins for thinking."
 ---
 
 In a corporate world every meeting now comes with an AI aide that happily spits

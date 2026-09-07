@@ -2,7 +2,8 @@
 layout : post
 title  : "R is a Terrible Programming Language"
 date   : 2024-04-20 13:05
-tags   : [R, Software, Data Science] 
+tags   : [R, Software, Data Science]
+description: "A long-time R user's honest critique of R as a programming language — and what keeps me using it anyway."
 ---
 
 Recently I have been contemplating about how I feel about R as a programming
