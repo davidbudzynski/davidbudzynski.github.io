@@ -1,9 +1,11 @@
 ---
-layout   : post
+layout : post
 title    : "Split Ergonomic Keyboards and Touch Typing"
 date     : 2024-03-10 10:00
-category : general
-tags     : Hardware
+tags     : [Hardware]
+description: "After hand fatigue from long typing days, I switched to a Cantor split ergonomic keyboard and relearned touch typing — here is what changed."
+redirect_from:
+  - /general/2024/03/10/split-keyboard.html
 ---
 
 ![Cantor split keyboard left side](/assets/images/IMG_20240310_073808.jpg)

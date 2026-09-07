@@ -1,9 +1,11 @@
 ---
-layout   : post
+layout : post
 title    : "Two years in Linux"
 date     :   2021-10-25 21:50
-category : general
 tags     : [Linux, Hardware]
+description: "What two years of daily-driving Linux taught me after a lifetime of Windows — from a beer-fried laptop to a custom-built PC."
+redirect_from:
+  - /general/2021/10/25/two-years-in-linux.html
 ---
 
 ## Interactions with other operating systems
