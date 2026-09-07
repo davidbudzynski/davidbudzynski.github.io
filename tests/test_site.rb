@@ -343,6 +343,32 @@ class LinksTest < Minitest::Test
   end
 end
 
+class LicenseTest < Minitest::Test
+  def test_license_gpl_for_code_reserved_for_content
+    text = read_file(File.join(ROOT, "LICENSE.md"))
+    assert_includes text, "GNU GENERAL PUBLIC LICENSE"
+    assert_includes text, "Version 3"
+    assert_includes text, "David Budzyński"
+    assert_includes text, "code blocks",
+      "LICENSE must state that post code examples are GPLv3"
+    assert_match(/all rights reserved/i, text)
+    refute_includes text, "Creative Commons",
+      "content must not carry a CC grant"
+    refute_includes text, "Permission is hereby granted",
+      "code must not carry the MIT grant"
+  end
+
+  def test_footer_shows_rights_notice
+    text = read_file(File.join(ROOT, "_includes", "footer.html"))
+    assert_includes text, "All rights reserved"
+    assert_includes text, "LICENSE"
+  end
+
+  def test_readme_points_at_license
+    assert_includes read_file(File.join(ROOT, "README.md")), "LICENSE"
+  end
+end
+
 class DraftsTest < Minitest::Test
   def test_drafts_have_basics
     skip "no _drafts dir" unless Dir.exist?(DRAFTS_DIR)
