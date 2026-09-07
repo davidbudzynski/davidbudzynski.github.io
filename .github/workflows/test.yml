@@ -9,7 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      # Stdlib only (minitest + yaml) — no `bundle install` needed,
+      # so this stays fast.
+      - uses: ruby/setup-ruby@v1
         with:
-          python-version: "3.12"
-      - run: python3 -m unittest discover -s tests -v
+          ruby-version: "3.4"
+      - run: ruby -Itests tests/test_site.rb
