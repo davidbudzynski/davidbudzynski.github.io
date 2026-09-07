@@ -3,6 +3,7 @@ layout : post
 title  : "Quarto for reproducible reports vs Jupyter"
 date   : 2026-09-08 10:00
 tags   : [Quarto, Jupyter, Reproducibility, Data Science]
+description: "Notebooks are great sketchpads and terrible deliverables — why Quarto's plain-text, render-from-clean-state documents beat Jupyter for anything meant to be read."
 ---
 
 Some time ago I wrote about running [C++ notebooks in Emacs' Org mode][3]. That
@@ -12,6 +13,8 @@ bigger point hiding underneath: plain text is a great medium for mixing code,
 results, and prose. In this post I want to apply that same argument to everyday
 data science work and compare [Jupyter][2] notebooks with [Quarto][1] documents
 for anything that deserves to be called a *report*.
+
+<!--more-->
 
 ## The notebook problem
 
@@ -104,6 +107,6 @@ they are just not the thing I hand over at the end.
 
 [1]: https://quarto.org/
 [2]: https://jupyter.org/
-[3]: https://davidbudzynski.github.io/2024/04/15/cpp-notebooks-org-mode.html
+[3]: {% post_url 2024-03-15-cpp-notebooks-org-mode %}
 [4]: https://rmarkdown.rstudio.com/
 [5]: https://pandoc.org/

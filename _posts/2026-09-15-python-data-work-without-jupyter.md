@@ -3,6 +3,7 @@ layout : post
 title  : "Writing Python for data work without Jupyter"
 date   : 2026-09-15 10:00
 tags   : [Python, Data Science]
+description: "After years of R Markdown and Makefiles, Jupyter never grew on me — the plain-text Python workflow I use instead, from REPL to scripts an AI agent can actually read."
 ---
 
 When I moved most of my work from R to Python, everyone assumed I would live in
@@ -14,6 +15,8 @@ moved into editors and plain scripts, every alternative plays nicely with
 version control, and these days plain text files are something my AI coding
 agent can actually work with — which matters to me quite a lot. This post is the
 workflow I use instead, and why I think notebooks have lost their advantage.
+
+<!--more-->
 
 ## Exploration: the REPL is enough
 
