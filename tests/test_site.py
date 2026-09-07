@@ -117,6 +117,9 @@ class ConfigTest(unittest.TestCase):
     def test_url(self):
         self.assertIn("https://davidbudzynski.github.io", self.config)
 
+    def test_tests_dir_excluded_from_build(self):
+        self.assertIn("tests/", self.config)
+
 
 class PostFrontMatterTest(unittest.TestCase):
     def test_all_posts(self):
