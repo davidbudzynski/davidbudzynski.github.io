@@ -19,3 +19,6 @@ keyboards to CLI file managers.
 I'm easy to reach on [GitHub](https://github.com/davidbudzynski). If a post is
 wrong, outdated, or just badly worded, the comments below each article are the
 best place to tell me.
+
+You can browse the [archive](/archive/) and [tags](/tags/), see what I
+[maintain](/projects/), or follow along [via RSS](/feed.xml).
