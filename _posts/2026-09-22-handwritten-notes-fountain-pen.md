@@ -101,7 +101,7 @@ hold on to. The pen gives you two thirds of a page you actually thought about
 
 [1]: https://doi.org/10.1007/s10648-024-09914-w
 [2]: {% post_url 2024-03-10-split-keyboard %}
-[3]: {% post_url 2024-04-15-cpp-notebooks-org-mode %}
+[3]: {% post_url 2024-03-15-cpp-notebooks-org-mode %}
 [4]: https://www.lamy.com/en-us/p/lamy-safari-fountain-pen
 [5]: https://www.pilot-custom.jp/en/
 [6]: https://platinumpenusa.com/luxury-writing/3776-collection/

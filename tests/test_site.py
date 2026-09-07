@@ -351,7 +351,17 @@ class LayoutsTest(unittest.TestCase):
 class LinksTest(unittest.TestCase):
     def test_post_url_tags_resolve(self):
         slugs = {f[:-3] for f in post_files()}  # filename without .md
-        for page in ["projects.md", "about.md", "archive.md"]:
+        pages = ["projects.md", "about.md", "archive.md"]
+        pages += [
+            os.path.join("_posts", f) for f in post_files()
+        ]
+        if os.path.isdir(DRAFTS_DIR):
+            pages += [
+                os.path.join("_drafts", f)
+                for f in os.listdir(DRAFTS_DIR)
+                if f.endswith(".md")
+            ]
+        for page in pages:
             path = os.path.join(ROOT, page)
             if not os.path.exists(path):
                 continue
