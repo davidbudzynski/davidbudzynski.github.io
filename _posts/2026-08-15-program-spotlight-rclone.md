@@ -2,7 +2,8 @@
 layout : post
 title  : "Program Spotlight: Rclone"
 date   : 2026-08-15 10:00
-tags   : [Software, backup, cloud, photography]
+tags   : [Software, Backup, Cloud, Photography]
+description: "Rclone is rsync for cloud storage — plus my favourite offline use case: ingesting photos and videos from a camera."
 ---
 
 **Rclone** is one of those command-line tools that you don't realize you need
@@ -10,6 +11,8 @@ until you have a specific, annoying problem. It's a program for syncing files
 to and from cloud storage, often described as "rsync for cloud storage". It
 supports dozens of providers like Google Drive, OneDrive, Dropbox, and
 S3-compatible storage.
+
+<!--more-->
 
 But my favourite use case for rclone has nothing to do with the cloud at all.
 It's copying photos and videos from a camera to my computer — and doing it

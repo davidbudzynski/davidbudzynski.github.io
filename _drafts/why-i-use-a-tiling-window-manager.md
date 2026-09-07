@@ -6,3 +6,5 @@ tags   : [Linux, WM]
 
 The workflow and productivity argument for tiling window managers, based on my
 own daily setup.
+
+<!--more-->

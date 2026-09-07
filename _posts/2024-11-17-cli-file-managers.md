@@ -3,6 +3,7 @@ layout : post
 title  : "Program Spotlight: CLI File Managers (Yazi & Midnight Commander)"
 date   : 2024-11-17 17:00
 tags   : [Software]
+description: "Yazi vs Midnight Commander: two very different CLI file managers and where each one shines."
 ---
 
 While graphical file managers dominate desktop workflows, **command-line
@@ -10,6 +11,8 @@ interface (CLI) file managers** remain indispensable tools for developers,
 system administrators, and command-line enthusiasts. They offer unparalleled
 speed, flexibility, and efficiency, particularly in environments where graphical
 user interfaces are unavailable or unnecessary.
+
+<!--more-->
 
 Among the diverse options available, **Yazi** and **Midnight Commander (MC)**
 stand out as two of the most interesting choices for very different reasons. In
@@ -32,7 +35,7 @@ unique advantages, such as:
 
 ## Yazi: Sleek and Modern with a Familiar Twist
 
-![Yazi](/assets/images/2024-11-17_16-53-yazi.png)
+![Yazi file manager screenshot](/assets/images/2024-11-17_16-53-yazi.png){: loading="lazy" }
 
 **Yazi** is a relatively new CLI file manager that has quickly gained attention
 for its minimalistic yet powerful design. It combines traditional CLI speed with
@@ -67,7 +70,7 @@ through directories and preview files or pictures without opening them.
 
 ## Midnight Commander: A Timeless Workhorse
 
-![Midnight Commander](/assets/images/2024-11-17_16-54-mc.png)
+![Midnight Commander screenshot](/assets/images/2024-11-17_16-54-mc.png){: loading="lazy" }
 
 **Midnight Commander (MC)** has stood the test of time, remaining a favorite
 among CLI enthusiasts for decades. With its **dual-pane interface**, extensive

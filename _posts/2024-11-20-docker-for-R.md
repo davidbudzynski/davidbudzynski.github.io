@@ -3,6 +3,7 @@ layout : post
 title  : "Docker for R projects"
 date   : 2024-11-20 18:08
 tags   : [R, Docker, Reproducibility, Software]
+description: "A practical intro to Docker for R projects: reproducible environments, collaboration, and when containers pay off."
 ---
 
 For years, R users have been known for their knack for analytical thinking, not
@@ -12,6 +13,8 @@ engineers, far removed from the world of statistical models, tidy data, and
 ggplots. But as the complexity of data science workflows has grown, the ability
 to manage environments, ensure reproducibility, and collaborate effectively has
 become critical. That’s where Docker comes in.
+
+<!--more-->
 
 At its core, Docker is a platform that helps you package and run applications in
 isolated environments called containers. A container is like a virtual box that

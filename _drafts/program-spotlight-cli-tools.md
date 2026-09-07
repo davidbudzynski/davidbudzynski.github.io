@@ -6,3 +6,5 @@ tags   : [Software, CLI]
 
 Part of the Program Spotlight series (following rclone and file managers). Covers
 fzf, ripgrep, tmux, zoxide, and bat.
+
+<!--more-->

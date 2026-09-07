@@ -6,3 +6,5 @@ tags   : [Web, Software, Privacy]
 
 A deeper dive into Firefox customization with userChrome.css examples, following
 up on the earlier Firefox post.
+
+<!--more-->

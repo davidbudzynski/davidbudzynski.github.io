@@ -3,6 +3,7 @@ layout : post
 title  : "renv vs Docker: when to use each"
 date   : 2026-09-01 10:00
 tags   : [R, Docker, Reproducibility]
+description: "renv and Docker solve different halves of reproducibility — when each is enough and when you need both."
 ---
 
 A while back I wrote about [Docker for R projects][5], and the most common
@@ -12,6 +13,8 @@ sometimes no. renv and Docker solve different halves of the reproducibility
 problem, and knowing which half you need saves a lot of frustration. In this
 post I want to compare the two tools directly and give some practical guidance
 on when each is the right choice.
+
+<!--more-->
 
 ## What renv locks down
 

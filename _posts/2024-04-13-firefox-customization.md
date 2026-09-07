@@ -1,9 +1,11 @@
 ---
-layout   : post
+layout : post
 title    : "Why I use Firefox as my default browser"
 date     : 2024-04-13 18:00
-category : general
 tags     : [Web, Software, Privacy]
+description: "Why Firefox is still my default browser: speed, customization, and privacy without Big Tech lock-in."
+redirect_from:
+  - /general/2024/04/13/firefox-customization.html
 ---
 
 ## Firefox's popularity around 2010's
@@ -16,6 +18,8 @@ that you could make your own.
 Fast forward to 2024, and Firefox's usage has been declining for years and years
 and its users are often seen as a dying breed. But I still use Firefox as my
 default browser. Why?
+
+<!--more-->
 
 ## Customization
 

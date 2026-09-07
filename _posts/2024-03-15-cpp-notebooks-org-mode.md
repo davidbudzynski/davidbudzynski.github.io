@@ -2,7 +2,8 @@
 layout : post
 title  : "C++ Notebooks in Emacs' Org Mode"
 date   : 2024-03-15 19:00
-tags   : [Emacs, org-mode, C++, Software]
+tags   : [Emacs, Org-Mode, C++, Software]
+description: "Writing C++ documentation as executable notebooks in Emacs Org mode for readers coming from other languages."
 ---
 
 I recently had to write some documentation for people who are not familiar with
@@ -10,6 +11,8 @@ C++ but know other programming languages and understand the basics of working
 inside notebooks. I thought to myself that org mode could be a good tool for
 this, as it can compile the code and put the output right next to it in an HTML
 or PDF format.
+
+<!--more-->
 
 ## What is Org Mode
 

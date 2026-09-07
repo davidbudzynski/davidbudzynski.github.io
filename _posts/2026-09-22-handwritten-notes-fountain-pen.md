@@ -3,12 +3,15 @@ layout : post
 title  : "Why I still write by hand"
 date   : 2026-09-22 10:00
 tags   : [Productivity, Writing, Tooling]
+description: "In a world of AI meeting transcripts nobody reads, why a fountain pen and two-thirds of a page still wins for thinking."
 ---
 
 In a corporate world every meeting now comes with an AI aide that happily spits
 out four pages of transcript-flavoured "notes" nobody will ever read. I go the
 other way: a fountain pen, decent ink, good paper, and two thirds of a page
 that is actually useful.
+
+<!--more-->
 
 This comes from a long-time Org mode user, not a pen-and-paper romantic. For
 many years I kept my work notes in Org mode and I still think it is great. But
@@ -98,7 +101,7 @@ hold on to. The pen gives you two thirds of a page you actually thought about
 
 [1]: https://doi.org/10.1007/s10648-024-09914-w
 [2]: {% post_url 2024-03-10-split-keyboard %}
-[3]: {% post_url 2024-04-15-cpp-notebooks-org-mode %}
+[3]: {% post_url 2024-03-15-cpp-notebooks-org-mode %}
 [4]: https://www.lamy.com/en-us/p/lamy-safari-fountain-pen
 [5]: https://www.pilot-custom.jp/en/
 [6]: https://platinumpenusa.com/luxury-writing/3776-collection/

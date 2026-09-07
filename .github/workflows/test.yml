@@ -1,0 +1,36 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  site-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Stdlib only (minitest + yaml) — no `bundle install` needed,
+      # so this stays fast.
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+      - run: ruby -Itests tests/test_site.rb
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+      # --strict-front-matter fails on YAML errors; --future also
+      # compiles scheduled posts so broken Liquid/post_url in them
+      # surfaces now instead of on their go-live date.
+      - run: bundle exec jekyll build --strict-front-matter --future
+      # Internal links, images, and alt text only — external URLs are
+      # left out to keep PR checks deterministic (no network flakiness).
+      # Installed outside the Gemfile on purpose: production (GitHub
+      # Pages) must keep the exact github-pages gem set.
+      - run: gem install html-proofer --no-document
+      - run: htmlproofer ./_site --disable-external --allow-hash-href

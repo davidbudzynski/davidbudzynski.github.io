@@ -6,3 +6,5 @@ tags   : [Software, Self-hosting]
 
 Document management done right: OCR, tagging, and search. Part of the Program
 Spotlight series.
+
+<!--more-->

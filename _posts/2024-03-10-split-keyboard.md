@@ -1,12 +1,14 @@
 ---
-layout   : post
+layout : post
 title    : "Split Ergonomic Keyboards and Touch Typing"
 date     : 2024-03-10 10:00
-category : general
-tags     : Hardware
+tags     : [Hardware]
+description: "After hand fatigue from long typing days, I switched to a Cantor split ergonomic keyboard and relearned touch typing — here is what changed."
+redirect_from:
+  - /general/2024/03/10/split-keyboard.html
 ---
 
-![Cantor split keyboard left side](/assets/images/IMG_20240310_073808.jpg)
+![Cantor split keyboard left side](/assets/images/IMG_20240310_073808.jpg){: loading="lazy" }
 
 In July last year I started thinking about getting an ergonomic split keyboard.
 Many people choose to get a split keyboard because they are more comfortable to
@@ -18,6 +20,8 @@ have the traditional mechanical switches such as Cherry MX Browns. I had heard
 about split keyboards before, but I had never really considered them. I thought
 that they would be very complicated to put together and too much trouble
 overall.
+
+<!--more-->
 
 I started to do some research and I found that there were many different types
 of split keyboards, some of them were very expensive and required many parts,
@@ -86,7 +90,7 @@ The entire build process took me about 6 hours. Fortunately, Cantor's build
 guide is very straightforward and easy to follow. Once you do one part, the
 other one is much easier.
 
-![Cantor split keyboard right side](/assets/images/IMG_0173.JPG)
+![Cantor split keyboard right side](/assets/images/IMG_0173.JPG){: loading="lazy" }
 
 ### Flashing the firmware
 
@@ -127,13 +131,13 @@ into your computer and use the GUI or a chromium-based browser
 After few trials and errors, I ended up with a layout that I was happy with. It
 looks like this (each picture is a different layer):
 
-![keyboard layout layer zero](/assets/images/2024-03-09_15-56_keeb-layout-layer-0.png)
+![keyboard layout layer zero](/assets/images/2024-03-09_15-56_keeb-layout-layer-0.png){: loading="lazy" }
 
-![keyboard layout layer one](/assets/images/2024-03-09_16-02-keyboard-layout-layer-1.png)
+![keyboard layout layer one](/assets/images/2024-03-09_16-02-keyboard-layout-layer-1.png){: loading="lazy" }
 
-![keyboard layout layer one](/assets/images/2024-03-09_16-03-keyboard-layout-layer-2.png)
+![keyboard layout layer two](/assets/images/2024-03-09_16-03-keyboard-layout-layer-2.png){: loading="lazy" }
 
-![keyboard layout layer one](/assets/images/2024-03-09_16-04-keyboard-layout-layer-3.png)
+![keyboard layout layer three](/assets/images/2024-03-09_16-04-keyboard-layout-layer-3.png){: loading="lazy" }
 
 ## Learning to touch type
 
@@ -158,7 +162,7 @@ doing these exercises now because I feel like typing on this keyboard is
 actually more comfortable than on a traditional one. Here is the graph of my
 progress. It took me about two months to get to 40 words per minute.
 
-![typing speed graph](/assets/images/2024-03-09_18-31-typing-overall.png)
+![typing speed graph](/assets/images/2024-03-09_18-31-typing-overall.png){: loading="lazy" }
 
 ## Conclusions
 

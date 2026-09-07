@@ -1,14 +1,18 @@
 ---
-layout   : post
+layout : post
 title    : "R 4.2.0 Native Placeholder"
 date     :   2022-04-23 21:00
-category : general
-tags     : R
+tags     : [R]
+description: "R 4.2.0 improved the native pipe and introduced the underscore placeholder — what it does and how it compares to magrittr."
+redirect_from:
+  - /general/2022/04/23/r-native-placeholder.html
 ---
 
 Yesterday (that is on April 22, 2022) R 4.2.0 was released and among
 other things, this release brought major improvements when using the
 native pipe operator (`|>`).
+
+<!--more-->
 
 You might be wondering: what is the native pipe anyways? Well, it's the
 base equivalent of `%>%` pipe from the `magrittr` package, heavily

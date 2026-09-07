@@ -1,9 +1,11 @@
 ---
-layout   : post
+layout : post
 title    : "Two years in Linux"
 date     :   2021-10-25 21:50
-category : general
 tags     : [Linux, Hardware]
+description: "What two years of daily-driving Linux taught me after a lifetime of Windows — from a beer-fried laptop to a custom-built PC."
+redirect_from:
+  - /general/2021/10/25/two-years-in-linux.html
 ---
 
 ## Interactions with other operating systems
@@ -18,6 +20,8 @@ hackintosh) - though that happened much later. I installed Windows 10 on it and
 I was happy, although I became more aware about embedded telemetry and privacy
 concerns expressed by other people on the Internet around the time when Windows
 10 was announced.
+
+<!--more-->
 
 Around that time I also bought my first iPhone and I immediately fell in love
 with it. I decided to try out one of the iMacs in the university library and I

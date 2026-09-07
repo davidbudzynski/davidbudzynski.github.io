@@ -2,13 +2,16 @@
 layout : post
 title  : "R is a Terrible Programming Language"
 date   : 2024-04-20 13:05
-tags   : [R, Software, Data Science] 
+tags   : [R, Software, Data Science]
+description: "A long-time R user's honest critique of R as a programming language — and what keeps me using it anyway."
 ---
 
 Recently I have been contemplating about how I feel about R as a programming
 language. Even though I have been using it for many years now, I have never been
 able to shake the feeling that apart from several nice packages, R is an
 inferior language.
+
+<!--more-->
 
 Over the years there have been many criticisms of R, some of them are valid,
 like the [R Inferno book][1], some of them are not, like many medium articles by
