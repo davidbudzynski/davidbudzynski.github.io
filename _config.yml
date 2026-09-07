@@ -43,6 +43,7 @@ header_pages:
   - projects.md
   - archive.md
   - tags.html
+  - search.md
 
 minima:
   skin: auto
