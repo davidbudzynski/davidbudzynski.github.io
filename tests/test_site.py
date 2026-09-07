@@ -316,6 +316,13 @@ class PagesTest(unittest.TestCase):
 
 
 class LayoutsTest(unittest.TestCase):
+    def test_home_prefers_description_over_excerpt(self):
+        text = read(os.path.join(ROOT, "_layouts", "home.html"))
+        self.assertIn("post.description", text)
+        self.assertIn("post.excerpt", text,
+                      "home must fall back to excerpt when description missing")
+        self.assertIn("post-list", text)
+        self.assertIn("rss-subscribe", text)
     def test_post_layout_nav_related_comments(self):
         text = read(os.path.join(ROOT, "_layouts", "post.html"))
         self.assertIn("page.previous", text)
