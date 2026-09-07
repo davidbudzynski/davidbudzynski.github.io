@@ -30,7 +30,7 @@ jobs:
       - run: bundle exec jekyll build --strict-front-matter --future
       # Internal links, images, and alt text only — external URLs are
       # left out to keep PR checks deterministic (no network flakiness).
-      # Installed outside the Gemfile on purpose: production (GitHub
-      # Pages) must keep the exact github-pages gem set.
+      # Installed outside the Gemfile on purpose to keep the deployed
+      # gem set minimal (check-only dependency, never shipped to Pages).
       - run: gem install html-proofer --no-document
       - run: htmlproofer ./_site --disable-external --allow-hash-href
