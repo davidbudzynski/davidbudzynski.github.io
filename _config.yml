@@ -20,6 +20,8 @@
 
 title: David Budzyński
 author: David Budzyński
+lang: en-GB
+timezone: Europe/London
 # email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is my blog where I share my thoughts on statistics, computer science, software, and technology.
@@ -28,12 +30,40 @@ url: "https://davidbudzynski.github.io" # the base hostname & protocol for your 
 github_username: davidbudzynski
 rss: RSS
 
+# Explicit permalink without :categories so URLs stay stable even if a
+# category ever slips back into front matter.
+permalink: /:year/:month/:day/:title.html
+# Scheduled posts (future-dated) stay hidden until their date — intentional.
+future: false
+excerpt_separator: <!--more-->
+show_excerpts: true
+
+header_pages:
+  - about.md
+  - projects.md
+  - archive.md
+  - tags.html
+
+minima:
+  skin: auto
+  social_links:
+    - { platform: github, user_url: "https://github.com/davidbudzynski" }
+    - { platform: rss, feed_url: "/feed.xml" }
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
