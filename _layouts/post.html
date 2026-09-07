@@ -47,11 +47,46 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
 
-  {%- assign issue-term = page.title |
-    remove: " | David Budzyński" |
-    prepend: 'Comments: ' -%} 
-    
-  {% include utterances.html issue-term=issue-term %}
+  <nav class="post-nav" aria-label="Post navigation">
+    <div>
+      {% if page.previous %}
+      <span>← Newer:</span>
+      <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title | escape }}</a>
+      {% endif %}
+    </div>
+    <div>
+      {% if page.next %}
+      <span>Older: →</span>
+      <a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }}</a>
+      {% endif %}
+    </div>
+  </nav>
+
+  {% assign related_count = 0 %}
+  <div class="related-posts">
+    <h2>Related posts</h2>
+    <ul>
+      {% for p in site.posts %}
+        {% if p.url != page.url and related_count < 3 %}
+          {% assign common = 0 %}
+          {% for tag in p.tags %}
+            {% if page.tags contains tag %}
+              {% assign common = common | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+          {% if common > 0 %}
+            <li><a href="{{ p.url | relative_url }}">{{ p.title | escape }}</a></li>
+            {% assign related_count = related_count | plus: 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if related_count == 0 %}
+        <li><a href="{{ "/archive/" | relative_url }}">Browse the archive</a></li>
+      {% endif %}
+    </ul>
+  </div>
+
+  {% include utterances.html issue-term="pathname" %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
