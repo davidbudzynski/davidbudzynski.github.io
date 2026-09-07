@@ -33,7 +33,7 @@ unique advantages, such as:
 
 ## Yazi: Sleek and Modern with a Familiar Twist
 
-![Yazi](/assets/images/2024-11-17_16-53-yazi.png)
+![Yazi file manager screenshot](/assets/images/2024-11-17_16-53-yazi.png){: loading="lazy" }
 
 **Yazi** is a relatively new CLI file manager that has quickly gained attention
 for its minimalistic yet powerful design. It combines traditional CLI speed with
@@ -68,7 +68,7 @@ through directories and preview files or pictures without opening them.
 
 ## Midnight Commander: A Timeless Workhorse
 
-![Midnight Commander](/assets/images/2024-11-17_16-54-mc.png)
+![Midnight Commander screenshot](/assets/images/2024-11-17_16-54-mc.png){: loading="lazy" }
 
 **Midnight Commander (MC)** has stood the test of time, remaining a favorite
 among CLI enthusiasts for decades. With its **dual-pane interface**, extensive
