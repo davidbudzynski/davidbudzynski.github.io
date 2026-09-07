@@ -207,6 +207,37 @@ class PostFrontMatterTest(unittest.TestCase):
         )
 
 
+class ExcerptMarkerTest(unittest.TestCase):
+    """Every post/draft must contain the excerpt_separator marker.
+
+    With a custom excerpt_separator, Jekyll uses the WHOLE article as the
+    excerpt when the marker is missing — the home page then renders full
+    articles instead of previews. This test makes that failure loud.
+    """
+
+    def _check_dir(self, directory):
+        files = sorted(
+            f for f in os.listdir(directory) if f.endswith(".md")
+        )
+        self.assertTrue(files, f"expected markdown files in {directory}")
+        for fname in files:
+            with self.subTest(file=fname):
+                _, body = parse_front_matter(
+                    read(os.path.join(directory, fname))
+                )
+                self.assertIn(
+                    "<!--more-->",
+                    body,
+                    "missing excerpt marker — home page would show full text",
+                )
+
+    def test_posts_have_markers(self):
+        self._check_dir(POSTS_DIR)
+
+    def test_drafts_have_markers(self):
+        self._check_dir(DRAFTS_DIR)
+
+
 class PostImagesTest(unittest.TestCase):
     IMG_RE = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
 
