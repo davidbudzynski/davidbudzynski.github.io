@@ -68,3 +68,55 @@ history stays readable. The compromise looks like this:
    real changes.
 4. Nothing gets committed straight from the agent's summary. The summary
    says "done". The diff decides.
+
+## Hunk: a nicer place to do it
+
+Plain `git diff` still works, but for agent-sized changesets I have started
+using [hunk][1], a review-first terminal diff viewer built for exactly this
+job. The project page is at [hunk.dev][2]. It is free and open source under
+MIT.
+
+Install on macOS or Linux with the standalone binary:
+
+```bash
+curl -fsSL https://hunk.dev/install.sh | sh
+```
+
+Alternatives are `brew install hunk`, `mise use -g hunk`, or
+`npm i -g hunkdiff` if you already run Node.js 22+. Updates go through
+`hunk update`, or your package manager if you installed it that way.
+
+My daily loop is three commands:
+
+```bash
+hunk diff         # working tree, untracked files included
+hunk diff --watch # auto-reloads while the agent keeps editing
+hunk show         # review the latest commit, or hunk show HEAD~1
+```
+
+A few more that earned a place: `hunk diff --files before.ts after.ts` for
+comparing two files directly, `git diff --no-color | hunk patch -` for
+reviewing a piped patch, and `hunk log` for browsing history from the
+terminal.
+
+What makes it different from [delta][4] or [difftastic][5] is that it is
+built for reviewing a whole changeset, not rendering one file prettily. You
+get a multi-file stream with a sidebar, split and unified layouts that adapt
+to terminal width, mouse support, syntax highlighting, and inline agent
+annotations next to the code. `delta` is still the better pager for a quick
+one-file look; `hunk` is where I go when the agent touched six files and I
+need to walk all of them.
+
+Two integrations are worth knowing. You can make it your Git pager so
+`git diff` and `git show` open in it automatically:
+
+```bash
+git config --global core.pager "hunk pager"
+```
+
+One caveat from the docs: untracked files are auto-included by `hunk diff`
+itself, but not when you go through `git diff` piped into `hunk pager` —
+there Git decides the patch contents. And for agent-driven review there is a
+skill workflow: open `hunk diff` in one terminal, run `hunk skill path` to
+get the skill file, and tell your agent to load it. The full version is
+documented in the [agent workflows guide][3].
