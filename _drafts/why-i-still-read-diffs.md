@@ -54,3 +54,17 @@ I linger:
 
 This is not distrust of the tool. It is the same bar I used for human pull
 requests — I just hit it ten times more often now.
+
+## How I keep git hygiene
+
+Agents are happiest when they can keep editing. I am happiest when the
+history stays readable. The compromise looks like this:
+
+1. One task, one branch, small commits. I review with `git diff` before
+   `git add`, never after.
+2. I split mega-diffs. If one agent turn touches three concerns, it becomes
+   three commits, even if that takes an extra five minutes.
+3. Lockfiles and generated files get their own commit so they never hide
+   real changes.
+4. Nothing gets committed straight from the agent's summary. The summary
+   says "done". The diff decides.
