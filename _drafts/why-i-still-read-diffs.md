@@ -133,3 +133,85 @@ every time.
 [3]: https://github.com/modem-dev/hunk/blob/main/docs/agent-workflows.md
 [4]: https://github.com/dandavison/delta
 [5]: https://github.com/Wilfred/difftastic
+
+<!--
+TODO(screenshots): take 2 hunk screenshots and embed them in the "Hunk: a
+nicer place to do it" section — split view after the daily-loop code block,
+unified view after the delta/difftastic paragraph.
+
+1. Recreate the demo diff (sidebar shows 2 files):
+
+  mkdir -p /tmp/hunk-demo && cd /tmp/hunk-demo && git init -q .
+  # save BASELINE below as sales.py, then:
+  git add sales.py
+  git -c user.name=demo -c user.email=demo@example.com commit -qm "baseline"
+  # overwrite sales.py with IMPROVED below, save summary.py as a new file,
+  # leave everything uncommitted.
+
+2. Review it (terminal ~150 cols, dark background, font 16+ for legibility):
+
+  hunk diff --mode split --theme github-dark-default
+  hunk diff --mode unified --theme github-dark-default
+
+  Capture with Screenshot.app (Cmd+Shift+5). Save as
+  assets/images/2026-09-13_hunk-diff-split.png and
+  assets/images/2026-09-13_hunk-diff-unified.png, then embed with:
+
+  ![Hunk split diff view with file sidebar](/assets/images/2026-09-13_hunk-diff-split.png){: loading="lazy" }
+
+BASELINE sales.py:
+  """Monthly sales totals per region."""
+  import csv
+
+  def load_rows(path):
+      f = open(path)
+      reader = csv.DictReader(f)
+      return list(reader)
+
+  def totals_by_region(rows):
+      totals = {}
+      for row in rows:
+          region = row["region"]
+          amount = float(row["amount"])
+          if region not in totals:
+              totals[region] = 0.0
+          totals[region] += amount
+      return totals
+
+  if __name__ == "__main__":
+      rows = load_rows("data/sales.csv")
+      for region, total in totals_by_region(rows).items():
+          print(f"{region}: {total:.2f}")
+
+IMPROVED sales.py:
+  """Monthly sales totals per region."""
+  from pathlib import Path
+  import pandas as pd
+
+  def load_sales(path):
+      path = Path(path)
+      if not path.exists():
+          raise FileNotFoundError(f"no sales file at {path}")
+      df = pd.read_csv(path, dtype={"region": str, "amount": float})
+      return df.dropna(subset=["region", "amount"])
+
+  def totals_by_region(df):
+      return df.groupby("region")["amount"].sum().sort_values()
+
+  if __name__ == "__main__":
+      totals = totals_by_region(load_sales("data/sales.csv"))
+      for region, total in totals.items():
+          print(f"{region}: {total:.2f}")
+
+summary.py (new, untracked):
+  """One-line summary for the weekly report."""
+  from sales import load_sales, totals_by_region
+
+  def main():
+      totals = totals_by_region(load_sales("data/sales.csv"))
+      best = totals.idxmax()
+      print(f"Top region: {best} ({totals[best]:.2f})")
+
+  if __name__ == "__main__":
+      main()
+-->
