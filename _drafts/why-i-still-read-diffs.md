@@ -120,3 +120,16 @@ there Git decides the patch contents. And for agent-driven review there is a
 skill workflow: open `hunk diff` in one terminal, run `hunk skill path` to
 get the skill file, and tell your agent to load it. The full version is
 documented in the [agent workflows guide][3].
+
+## Closing thoughts
+
+The agent made writing code cheaper. It did not make deciding what the code
+should be any cheaper. Reading diffs is where that decision still happens,
+and a decent review UI just lowers the friction enough that I actually do it
+every time.
+
+[1]: https://github.com/modem-dev/hunk
+[2]: https://hunk.dev
+[3]: https://github.com/modem-dev/hunk/blob/main/docs/agent-workflows.md
+[4]: https://github.com/dandavison/delta
+[5]: https://github.com/Wilfred/difftastic
