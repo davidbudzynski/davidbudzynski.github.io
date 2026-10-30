@@ -381,7 +381,7 @@ solve.
 [5]: https://rmarkdown.rstudio.com/
 [6]: https://ggplot2.tidyverse.org/
 [7]: https://rdatatable.gitlab.io/data.table/
-[8]: https://polars.rs/
+[8]: https://pola.rs/
 [9]: https://mc-stan.org/rstan/
 [10]: https://twitter.com/WhyDoesR
 [11]:https://stackoverflow.com/q/63606106/13158146
