@@ -1,17 +1,19 @@
 source "https://rubygems.org"
 
-# GitHub Pages builds the site with Jekyll 3.9.x. Pinning to the github-pages
-# gem keeps the local build environment identical to the one used for
-# deployment, so there are no surprises when the site goes live.
-gem "github-pages", group: :jekyll_plugins
+# Deployed with a custom GitHub Actions workflow (.github/workflows/pages.yml),
+# not the legacy branch-based Pages build. This allows Jekyll 4 + current
+# plugins instead of the pinned github-pages gem set.
+gem "jekyll", "~> 4.4.1"
 
-# Default theme for Jekyll sites. You may change this to anything you like.
-gem "minima"
+# Current theme release (2.5.2 is latest; see _config.yml re: `skin`).
+gem "minima", "~> 2.5.2"
 
-# The github-pages stack relies on these default gems, which are no longer
-# bundled with Ruby >= 3.4.
-gem "logger"
-gem "csv"
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-redirect-from", "~> 0.16"
+end
 
 # Ruby >= 3.0 no longer ships WEBrick, which Jekyll needs for `serve`.
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.9"

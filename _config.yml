@@ -46,8 +46,9 @@ header_pages:
   - search.md
 
 minima:
-  # NOTE: github-pages pins minima 2.5.1, which ignores `skin`.
-  # Kept as forward-compat for minima 3.x (auto = light/dark by OS setting).
+  # NOTE: minima 2.5.x ignores `skin` (no skins/ dir upstream).
+  # Kept as forward-compat in case a future minima honors it
+  # (auto = light/dark by OS setting).
   skin: auto
   # Social icons on minima 2.5.x come from the legacy `github_username` /
   # `rss` keys above via _includes/social.html, not from social_links.
