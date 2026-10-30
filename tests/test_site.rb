@@ -305,6 +305,7 @@ class LayoutsTest < Minitest::Test
     text = read_file(File.join(ROOT, "_includes", "head.html"))
     assert_includes text, "theme-color"
     assert_includes text, "apple-touch-icon"
+    assert_includes text, "/assets/apple-touch-icon.png"
   end
 end
 
