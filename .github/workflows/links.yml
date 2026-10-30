@@ -21,6 +21,6 @@ jobs:
       # This runs on a schedule, never on a PR, so a flaky third-party host
       # cannot block a pull request.
       - run: gem install html-proofer --no-document
-      # 403 = a bot wall (Cloudflare, Stack Overflow); 429 = rate limiting.
-      # Neither means the link is dead, and both are intermittent from CI.
-      - run: htmlproofer ./_site --allow-hash-href --ignore-status-codes 403,429
+      # 403 = a bot wall (Cloudflare, Stack Overflow); 415 = a WAF rejecting
+      # CI datacentre IPs; 429 = rate limiting. None means the link is dead.
+      - run: htmlproofer ./_site --allow-hash-href --ignore-status-codes 403,415,429
