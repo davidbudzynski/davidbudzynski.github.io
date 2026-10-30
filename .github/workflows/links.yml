@@ -1,0 +1,26 @@
+name: links
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  external-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+      # Published posts only: a future-dated post's links are checked once it
+      # goes live. --strict-front-matter catches YAML errors like the PR build.
+      - run: bundle exec jekyll build --strict-front-matter
+      # Unlike the PR check in test.yml, external URLs are checked here too.
+      # This runs on a schedule, never on a PR, so a flaky third-party host
+      # cannot block a pull request.
+      - run: gem install html-proofer --no-document
+      # 403 = a bot wall (Cloudflare, Stack Overflow); 429 = rate limiting.
+      # Neither means the link is dead, and both are intermittent from CI.
+      - run: htmlproofer ./_site --allow-hash-href --ignore-status-codes 403,429
