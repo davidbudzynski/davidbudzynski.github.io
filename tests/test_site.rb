@@ -364,6 +364,8 @@ class LicenseTest < Minitest::Test
     text = read_file(File.join(ROOT, "_includes", "footer.html"))
     assert_includes text, "BY-NC-ND"
     assert_includes text, "LICENSE"
+    # Year must come from the build time, not a literal that goes stale.
+    assert_includes text, "© 2021–{{ site.time | date: '%Y' }}"
   end
 
   def test_readme_points_at_license
