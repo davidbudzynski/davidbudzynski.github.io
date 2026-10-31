@@ -1,6 +1,7 @@
 ---
 layout : post
 title  : "No-AI open source is a self-own"
+date   : 2026-10-31 11:00
 tags   : [AI, Software, Open Source]
 description: "Airflow and Omarchy get it, GNOME can't decide, and the hobbyist contributor pays for the difference."
 ---
