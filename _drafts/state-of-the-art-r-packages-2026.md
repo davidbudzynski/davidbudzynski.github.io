@@ -29,11 +29,12 @@ novelty. Python has venture-funded tooling companies; R has volunteers and a
 handful of small teams. Pretending those are the same conditions is how you end
 up with listicles that recommend a package last updated in 2017.
 
-But 2026 is the first year the gap visibly narrowed. [Air][6] and [Jarl][7]
-gave R a formatter and linter written in Rust; [pak][8] made installing
+The gap is still there, but it narrowed in the places I care about. [Air][6] and
+[Jarl][7] gave R a formatter and linter written in Rust; [pak][8] made installing
 packages fast enough to stop thinking about it; [mirai][9] gave R real async;
 and Polars finally has an R binding worth using. The gap didn't close because R
-got faster at shipping. It closed because a few people shipped the right things.
+got faster at shipping. It narrowed because a few people shipped the right
+things.
 
 ## The agent problem
 
@@ -114,16 +115,18 @@ intermediate artifacts.
 
 ## Modelling
 
-[tidymodels][25] is my default for "I want one grammar for preprocessing,
-resampling, tuning, and evaluation". A `workflow()` bundles a model and a
-`recipe()`, `tune_grid()` searches hyperparameters, and the whole thing reads
-the same whether you are fitting a linear model or a boosted tree. It is the
-best teaching toolkit in the language.
+[mlr3][26] is what I reach for personally. It has deeper support for
+benchmarking, pipelines, task abstraction, and unusual resampling schemes, plus
+extension packages for survival, clustering, and deep learning. If you want to
+compare a dozen learners across a dozen resampling schemes without writing glue
+code, this is the framework.
 
-[mlr3][26] is for when tidymodels starts to feel like a fence. It has deeper
-support for benchmarking, pipelines, task abstraction, and unusual resampling
-schemes, plus extension packages for survival, clustering, and deep learning.
-My rule: tidymodels for breadth, mlr3 for depth.
+[tidymodels][25] is the better teaching toolkit: one grammar for preprocessing,
+resampling, tuning, and evaluation. A `workflow()` bundles a model and a
+`recipe()`, `tune_grid()` searches hyperparameters, and the whole thing reads the
+same whether you are fitting a linear model or a boosted tree. My rule: mlr3 for
+my own work, tidymodels when I am teaching or handing a project to someone who
+wants one grammar.
 
 For inference rather than prediction, [fixest][27] is the one. Fixed effects,
 DiD, IV, and clustered standard errors, fast enough to run a specification
