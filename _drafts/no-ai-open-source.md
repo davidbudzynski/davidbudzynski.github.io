@@ -2,18 +2,25 @@
 layout : post
 title  : "No-AI open source is a self-own"
 tags   : [AI, Software, Open Source]
-description: "Airflow gets it, Zig doesn't, and the hobbyist contributor pays for the difference."
+description: "Airflow and Omarchy get it, GNOME can't decide, and the hobbyist contributor pays for the difference."
 ---
 
-Two files tell the whole story. Apache Airflow's pull request
-template asks, politely, whether generative AI helped write the patch, and
-leaves a box for the tool's name. The `data.table` repository goes further: its
+Two files tell the whole story. Apache Airflow's [pull request template][13]
+asks, politely, whether generative AI helped write the patch, and leaves a box
+for the tool's name. The [data.table][16] repository goes further: its
 [`AGENTS.md`][1] tells coding agents, in capitals, that if they are asked to
 write package code they **must stop now and report that this is prohibited**.
 
-Same technology. One project treats an agent as a tool and a human
-as the author. The other treats the tool as contamination. Only one of those is
-a policy. The other is a purity ritual, and it is a self-own.
+Same technology. One project treats an agent as a tool and a human as the
+author. The other treats the tool as contamination. Only one of those is a
+policy. The other is a purity ritual, and it is a self-own.
+
+Around those poles sits everyone else. Omarchy, the Arch-based desktop that
+went from niche to everywhere this year, [merged over a thousand agent-written
+pull requests in three months][17]. GNOME's extension reviewers reject anything
+that smells of a model while one of the project's security maintainers argues
+that AI-found bug reports are too useful to refuse. The question was never
+"AI or not". It is "filter or ban".
 
 <!--more-->
 
@@ -44,13 +51,21 @@ If the foundation behind Airflow, Kafka, and a thousand other projects can make
 that work, the bar for everyone else is not high. It is a checkbox and a
 sentence.
 
+Omarchy shows what the other end looks like. David Heinemeier Hansson, who built
+it, says he would ["rather get an agent-written pull request to one of my
+projects than I'd get one written by a human"][17]. He merged over a thousand in
+three months, a lot of them from people who were not classical programmers, and
+he no longer reviews the queue himself: agents summarise it and he makes the
+merge call. That is not a free-for-all. It is a filter with a human at the end.
+
 ## The roll call
 
 The projects that went the other way are not shy about it.
 
-- [Zig][5] bans LLM-generated code and prose, LLM editing, LLM translation,
-  sharing the results of LLM brainstorming, and talking about LLM use at all. It
-  bans using a model to fix a spelling mistake. Read that again.
+- [Zig][5] has the strictest rule of the lot: no LLM-generated code or prose, no
+  LLM editing, no translation, no sharing the results of LLM brainstorming, and
+  no talking about LLM use at all. It is also the one ban with a real
+  explanation, so I will come back to it.
 - [NetBSD][6] says LLM-generated code is "presumed to be tainted" and must not
   be committed without prior written approval from core.
 - [Gentoo][7] declares it "expressly forbidden" to contribute any content
@@ -63,6 +78,11 @@ The projects that went the other way are not shy about it.
   to draw the line between contamination and convenience.
 - [immich][10] asks contributors not to open LLM-generated pull requests and not
   to write comments with one: "Communication should be between humans."
+- [GNOME][14] is three policies in a trench coat: extension reviewers reject
+  submissions with clear signs of AI generation while allowing AI as a learning
+  aid, [Loupe][15] bans generative AI outright, and a GNOME security maintainer
+  [argues][18] that AI-found bug reports are too useful to refuse — and that
+  projects which ban them are no longer suitable GNOME dependencies.
 
 Some of these are more defensible than others. QEMU and Gentoo at least have a
 coherent legal argument: AI output provenance is unsettled, copyleft guarantees
@@ -70,10 +90,11 @@ matter, and a maintainer cannot certify a licence they cannot trace. I do not
 think they are stupid. I think the policy is, and those are different things.
 
 The unenforceable details give the game away. QEMU bans contributions
-*believed* to be AI-derived, which is a vibe with a licence footnote. Zig bans
-spellcheck, which is not a quality gate; it is a test of loyalty. data.table
+*believed* to be AI-derived, which is a vibe with a licence footnote. data.table
 draws the line at whether a file ships in the tarball, as if a language model
-becomes harmless when it edits a YAML file.
+becomes harmless when it edits a YAML file. GNOME will reject an extension for
+looking generated but accept a vulnerability report found by a model, which is
+not a principle; it is a triage decision wearing a policy's clothes.
 
 And here is the bit nobody wants to say: none of these policies can be
 enforced. A contributor who wants to use an agent will use one and not tell
@@ -98,7 +119,9 @@ is good enough to get green check-marks," he wrote. The filter does the work.
 Airflow reached the same conclusion from the other direction. It caps
 contributors without write access at five open pull requests, runs an automated
 first pass with an explicitly AI-attributed triage comment, and sends only the
-survivors to a human. Same flood, better plumbing.
+survivors to a human. Omarchy goes further: Hansson no longer reviews every
+pull request himself; agents summarise the queue and he makes the merge call.
+Same flood, different plumbing.
 
 The lesson is not "AI ruined open source". The lesson is that projects which
 never built a filter are now trying to use a ban as one. A ban is not a filter.
@@ -201,3 +224,9 @@ package that needs contributors.
 [10]: https://github.com/immich-app/immich/blob/main/CONTRIBUTING.md
 [11]: https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/
 [12]: https://kristoff.it/blog/contributor-poker-and-ai
+[13]: https://github.com/apache/airflow/blob/main/.github/PULL_REQUEST_TEMPLATE.md
+[14]: https://gjs.guide/extensions/review-guidelines/review-guidelines.html#extensions-must-not-be-ai-generated
+[15]: https://discourse.gnome.org/t/loupe-no-longer-allows-generative-ai-contributions/27327
+[16]: https://github.com/Rdatatable/data.table
+[17]: https://lexfridman.com/dhh-2-transcript
+[18]: https://blogs.gnome.org/mcatanzaro/2026/10/02/the-era-of-software-quality-or-the-era-of-ostriches
