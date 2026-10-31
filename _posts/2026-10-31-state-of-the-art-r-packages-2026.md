@@ -1,6 +1,7 @@
 ---
 layout : post
 title  : "State of the art R packages in 2026"
+date   : 2026-10-31 10:00
 tags   : [R, Data Science, Tooling]
 description: "R's tooling never caught up with Python's, and agentic coding may finish the job — but the packages worth installing in 2026 are genuinely good."
 ---
