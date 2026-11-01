@@ -20,18 +20,21 @@ hypothetical workflow quietly rotted. That is a better test than any refactor.
 
 ## Stow is the whole framework
 
-The repo is a shadow of `$HOME`. Every top-level directory is one program, and
-the files inside it sit exactly where they would sit in your home directory:
+The repo is a shadow of `$HOME`. Each top-level directory is one program, and the
+files inside it sit exactly where they would sit in your home directory. Here is
+a slice of it:
 
 ```
 dotfiles/
 ├── alacritty/.config/alacritty/alacritty.toml
+├── bin/
 ├── doom/.config/doom/
+├── ghostty/.config/ghostty/
+├── picom/.config/picom/
 ├── qtile/.config/qtile/
 ├── rofi/.config/rofi/
 ├── tmux/.config/tmux/
-├── zsh/.zshrc
-└── bin/
+└── zsh/.zshrc
 ```
 
 [GNU Stow][2] creates the symlinks:
@@ -102,7 +105,8 @@ desktop.
 A TUI is a text protocol. It composes with other tools, it works when the
 graphical session does not, and an agent can read its output. That last property
 used to be a nice accident. Now it is the reason the terminal is the most
-future-proof part of the desktop.
+future-proof part of the desktop. I made the longer argument in [Five years in
+Linux][16].
 
 ## The newest entry is OpenCode
 
@@ -113,9 +117,7 @@ text out.
 
 The dotfiles were agent-readable by accident. Plain files, small scripts, a
 `bin/` directory, no opaque database. Now that is a feature: the same repo that
-rebuilds my machine is the context an agent needs to work on it. Its config is
-the one part of the setup that has not made it into the repo yet, which is
-probably the next commit.
+rebuilds my machine is the context an agent needs to work on it.
 
 I wrote about the policy side of AI contributions [elsewhere][14], and about why
 I still read the diffs [here][15]. This is the practical version: the harness is
@@ -155,3 +157,4 @@ The dotfiles are boring. The tools they let me run are not.
 [13]: https://davidbudzynski.github.io/2024/11/17/cli-file-managers.html
 [14]: https://davidbudzynski.github.io/2026/10/31/no-ai-open-source.html
 [15]: https://davidbudzynski.github.io/2026/10/30/why-i-still-read-diffs.html
+[16]: https://davidbudzynski.github.io/2026/11/03/five-years-in-linux.html

@@ -1,11 +1,11 @@
 ---
 layout : post
-title  : "Five years in Linux: revisiting Two Years in Linux"
+title  : "Five years in Linux"
 tags   : [Linux, Hardware]
 description: "Five years after Two Years in Linux: the desktop war ended, the stack won, and the terminal mattered again."
 ---
 
-Five years ago, almost to the month, I published [Two years in Linux][1]. It
+Five years ago this month, I published [Two years in Linux][1]. It
 ended with a compromise: visual prettiness and access to proprietary software,
 traded for an operating system that worked. I meant it then, and I still mean it
 now. What I did not expect was that the compromise would stop feeling like one.
@@ -21,7 +21,7 @@ HiDPI on Xorg and a Wayland session that was not ready.
 Five years later, two of those three verdicts have held, one has changed, and
 the thing I thought was the point turned out not to be.
 
-## The desktop war ended and nobody won
+## The desktop war ended and the stack won
 
 In 2021 the argument was GNOME versus KDE. In 2026 the argument is whether a
 distro should have opinions at all.
@@ -33,17 +33,19 @@ different needs. But institutions are not where the energy comes from, and this
 year the energy moved somewhere else.
 
 [Omarchy][2] is the clearest example: Arch, Hyprland, a set of opinionated
-defaults, and a website that calls itself "agentic Linux". It has around 45,000
-GitHub stars and over a million ISO downloads in its first year. [Hyprland][3]
+defaults, and a website that calls itself "agentic Linux". It has more than
+46,000 GitHub stars and 1.3 million ISO downloads in its first year. [Hyprland][3]
 and [Niri][4] made tiling compositors legible to people who had never edited a
 config file. [Noctalia][5] and [Dux][6] turned the desktop shell into a thing you
-choose, the way you choose a terminal emulator.
+choose, the way you choose a terminal emulator. Omarchy is opinionated, but what
+it ships is a stack — compositor, shell, terminal, editor, agent — not a desktop
+environment with a settings panel.
 
-That is not the same as Linux taking over the desktop. [Linux is still around
-four per cent of desktops][9], depending on who is counting. The accurate claim
-is smaller and more interesting: **the momentum moved, even if the market did
-not.** The people building the desktop I want to use are no longer in a GNOME
-design meeting.
+That is not the same as Linux taking over the desktop. [Linux is over five per
+cent of desktops][9] by StatCounter's count. But market share is no longer the
+interesting number: **the momentum moved, even if the market did not.** The
+people building the desktop I want to use are no longer in a GNOME design
+meeting.
 
 ## The stack replaced the desktop
 
@@ -107,17 +109,19 @@ It would be too neat to credit agents for Linux's growth. The bigger driver is
 games. But agents make the terminal more valuable than it has been in years, and
 that is a tailwind nobody was predicting five years ago.
 
-## The normies arrived through Steam
+## Everyone else arrived through Steam
 
 I do not play games. I still have to mention this, because it is the biggest
 thing that happened to the Linux desktop in the last five years.
 
-Valve shipped the [Steam Machine][10] in June 2026 — a console-sized PC that
-boots SteamOS — alongside the Steam Frame and a new Steam Controller. [Linux
-briefly passed five per cent of Steam users][11] in March 2026 before settling
-back around four, and the distribution chart is the interesting part: CachyOS and
-Arch, both Arch-based, are now a serious slice of Linux gamers. The distro people
-choose when they care about performance is the same family as Omarchy.
+Valve shipped the new Steam Controller in May 2026 and the [Steam Machine][10]
+in June — a console-sized PC that boots SteamOS — with the Steam Frame following
+in September. The Machine starts at $1,049, a price the RAM market shaped as much
+as Valve did. [Linux briefly passed five per cent of Steam users][11] in March
+2026 before settling back around four, and the distribution chart is the
+interesting part: CachyOS and Arch, both Arch-based, are now a serious slice of
+Linux gamers. The distro people choose when they care about performance is the
+same family as Omarchy.
 
 Valve did more for the Linux desktop than a decade of desktop-environment
 arguments. Not because SteamOS is a purist's dream, but because it shipped
