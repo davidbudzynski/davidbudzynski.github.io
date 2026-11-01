@@ -1,6 +1,7 @@
 ---
 layout : post
 title  : "Five years in Linux"
+date   : 2026-11-03 00:01
 tags   : [Linux, Hardware]
 description: "Five years after Two Years in Linux: the desktop war ended, the stack won, and the terminal mattered again."
 ---
