@@ -1,6 +1,7 @@
 ---
 layout : post
 title  : "My dotfiles have stopped changing"
+date   : 2026-11-10 00:01
 tags   : [Linux, Tooling]
 description: "GNU Stow, Doom Emacs, TUI tools, and OpenCode: the setup that survived by not being rewritten."
 ---
