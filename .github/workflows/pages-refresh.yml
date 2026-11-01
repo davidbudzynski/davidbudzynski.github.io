@@ -1,0 +1,22 @@
+name: pages refresh
+
+# GitHub Pages only builds when the publishing branch changes, and
+# `future: false` hides future-dated posts at build time. Request a build once a
+# day so a post dated for today goes live without needing a push.
+on:
+  schedule:
+    - cron: "15 6 * * *" # daily 06:15 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a GitHub Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
