@@ -44,7 +44,7 @@ with its version number and where it came from:
 
 Anyone with your project and your lockfile can run `renv::restore()` and end up
 with the same package versions you had. For most day-to-day breakage — an update
-to a package changing behavior under you — renv solves the problem completely.
+to a package changing behaviour under you — renv solves the problem completely.
 It is lightweight, fast to adopt, and stays out of your way. If you are not using
 it yet, there is little excuse: it takes about five minutes to add to a project.
 
@@ -86,16 +86,18 @@ once:
 ```dockerfile
 FROM rocker/r-ver:4.4.2
 
-RUN Rscript -e "install.packages(c('data.table', 'ggplot2'))"
+# noble == Ubuntu 24.04, the distro inside rocker/r-ver:4.4.2
+RUN Rscript -e "install.packages(c('data.table', 'ggplot2'), \
+      repos = 'https://packagemanager.posit.co/cran/__linux__/noble/2025-02-27')"
 
 COPY analysis.R /project/analysis.R
 CMD ["Rscript", "/project/analysis.R"]
 ```
 
-Here `rocker/r-ver:4.4.2` pins Ubuntu and R, the package repository URL points
-at a dated P3M snapshot so installed packages never move, and the image itself
-pins the result. Rebuild it in five years and you get the same environment back.
-This is what people mean by "it runs the same everywhere".
+Here `rocker/r-ver:4.4.2` pins Ubuntu 24.04 and R, the `noble` snapshot URL in
+the install line freezes every package at CRAN as it looked on that date, and
+the image itself pins the result. Rebuild it in five years and you get the same
+environment back. This is what people mean by "it runs the same everywhere".
 
 ## When renv is enough
 
