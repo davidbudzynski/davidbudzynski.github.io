@@ -86,16 +86,18 @@ once:
 ```dockerfile
 FROM rocker/r-ver:4.4.2
 
-RUN Rscript -e "install.packages(c('data.table', 'ggplot2'))"
+# noble == Ubuntu 24.04, the distro inside rocker/r-ver:4.4.2
+RUN Rscript -e "install.packages(c('data.table', 'ggplot2'), \
+      repos = 'https://packagemanager.posit.co/cran/__linux__/noble/2025-02-27')"
 
 COPY analysis.R /project/analysis.R
 CMD ["Rscript", "/project/analysis.R"]
 ```
 
-Here `rocker/r-ver:4.4.2` pins Ubuntu and R, the package repository URL points
-at a dated P3M snapshot so installed packages never move, and the image itself
-pins the result. Rebuild it in five years and you get the same environment back.
-This is what people mean by "it runs the same everywhere".
+Here `rocker/r-ver:4.4.2` pins Ubuntu 24.04 and R, the `noble` snapshot URL in
+the install line freezes every package at CRAN as it looked on that date, and
+the image itself pins the result. Rebuild it in five years and you get the same
+environment back. This is what people mean by "it runs the same everywhere".
 
 ## When renv is enough
 
