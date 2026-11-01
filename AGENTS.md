@@ -48,7 +48,8 @@ separate PRs. Do not mix them unless the user explicitly asks for one PR.
 - The filename slug is the public URL (`/YYYY/MM/DD/<final-slug>.html`), so
   choose the final name here rather than during drafting.
 - `date` is the intended publication date, not the date the draft was written.
-  A future date schedules the post and is allowed.
+  A future date is allowed. `.github/workflows/pages-refresh.yml` rebuilds the
+  site daily, so the post appears within a day of that date without a push.
 - Done when `bundle exec jekyll build` passes and the rendered URL, title,
   date, and tags are correct.
 
