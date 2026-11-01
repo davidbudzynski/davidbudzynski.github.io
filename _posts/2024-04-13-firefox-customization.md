@@ -8,12 +8,12 @@ redirect_from:
   - /general/2024/04/13/firefox-customization.html
 ---
 
-## Firefox's popularity around 2010's
+## Firefox's popularity in the 2010s
 
 When I was growing up, Firefox was the browser to use. It was the most popular
-browser (at lest in Poland), with a market share above 50%. It was fast, secure,
-and customizable. It was the browser that you could trust. It was the browser
-that you could make your own.
+browser (at least in Poland), with a market share above 50%. It was fast,
+secure, and customizable. It was the browser that you could trust. It was the
+browser that you could make your own.
 
 Fast forward to 2024, and Firefox's usage has been declining for years and years
 and its users are often seen as a dying breed. But I still use Firefox as my
@@ -35,14 +35,14 @@ Firefox has a hidden configuration menu called `about:config` that allows you to
 change a lot of settings that are not available in the regular settings menu.
 Once these settings are changed, they are saved in a file called `prefs.js` in
 your profile directory. This file is a simple JavaScript file that you can edit
-manually if you want to. If you have a firefox account, it also syncs these
+manually if you want to. If you have a Firefox account, it also syncs these
 settings across all your devices. These settings allow you to increase your
 privacy and security.
 
 ### userChrome.css
 
-If you want to change the way Firefox looks, and I mean if you don't like any
-elements of the UI, you can use `userChrome.css` file. This file allows you to
+If you want to change the way Firefox looks, and I mean if you don't like some
+elements of the UI, you can use a `userChrome.css` file. This file allows you to
 change the appearance of Firefox's UI using CSS. You can change the colors, the
 fonts, the sizes, the positions, and the visibility of almost every element of
 the UI. You can make Firefox look exactly the way you want it to. You can make
@@ -52,15 +52,15 @@ I use a dynamic tiling window manager, so for many years I had a custom
 `userChrome.css` that removed the title bar as well as the tab view (I opt for
 vertical tabs which I'll get to later on).
 
-If you search on github, you can find many `userChrome.css` projects with
-thousands of stars. Lately, I've stumbled upon [Lepton][1]. This projects aims to make
-the Firefox UI more minimalistic and modern. It's a great starting point. I only
-removed the title bar and the tab view from it.
+If you search on GitHub, you can find many `userChrome.css` projects with
+thousands of stars. Lately, I've stumbled upon [Lepton][1]. This project aims to
+make the Firefox UI more minimalistic and modern. It's a great starting point. I
+only removed the title bar and the tab view from it.
 
 Speaking of using window managers, Firefox has this annoying feature where the
 settings and right click menus show an ugly border around them. To fix this, you
-need to add the following to your picom config (assuming you're using X11 based
-window manager and picom as a compositor):
+need to add the following to your picom config (assuming you're using an
+X11-based window manager and picom as a compositor):
 
 ```bash
 shadow-exclude = [
@@ -104,9 +104,9 @@ which is easier on the eyes in dark environments. For spell checking I use
 [LanguageTool][11], which is a grammar and spell checker that works in multiple
 languages.
 
-#### Youtube
+#### YouTube
 
- To limit my usage of YouTube, I use [SponsorBlock][12] to skip sponsored
+To limit my usage of YouTube, I use [SponsorBlock][12] to skip sponsored
 segments in videos. I also use [Enhancer for YouTube][13] to make the video player
 more minimalistic, without recommendations, play next, and playlists.
 

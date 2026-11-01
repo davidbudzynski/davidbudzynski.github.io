@@ -32,27 +32,27 @@ go to the office and to be able to utilize the programmability of these
 keyboards, so I can assign keys how I like. I decided that I wanted to build my
 own split keyboard, and I started to look for information on how to do it. My
 research concluded that there were 3 options which would be ideal for me:
-[Lilly58][1], [Corne][2], and the [Cantor][3]. I decided to go with the Cantor
+[Lily58][1], [Corne][2], and the [Cantor][3]. I decided to go with the Cantor
 because it was the cheapest overall and required the least amount of parts.
 
 The Cantor is a 40% split keyboard with 42 keys. It was inspired by Corne and
 other similar keyboards, but it has a stronger column stagger which is useful
-for those with larger hands, like mine.It is a very simple keyboard and it was
+for those with larger hands, like mine. It is a very simple keyboard and it was
 designed like that on purpose to keep the price low and the assembly process
 simple.
 
 ## Hardware
 
-The Cantor repo on Github contains all information you need. Almost every part
-with the exception of the PCB can be bought from Aliexpress. The PCB can be
+The Cantor repo on GitHub contains all the information you need. Almost every
+part with the exception of the PCB can be bought from AliExpress. The PCB can be
 ordered from either JLCPCB or PCBWay. I ordered mine from JLCPCB and it cost me
-£16.47 for 5 PCBs. All parts cost me £80.61, but the the price per one assembled
-keyboard was around b£66. Some of these parts are sold in lots, so you are left
+£16.47 for 5 PCBs. All parts cost me £80.61, but the price per assembled
+keyboard was around £66. Some of these parts are sold in lots, so you are left
 with a few spare ones, but there is no other way of getting around this, unless
-you order a DIY kit from vendors who sell those. Ordering parts from Aliexpress
+you order a DIY kit from vendors who sell those. Ordering parts from AliExpress
 is still a cheaper way to buy them compared to those kits! I wanted to try
 building one keyboard and perhaps in the future experiment with more, so I went
-this route. There are however vendors who sell pre-assembled keyboards, so if
+this route. There are, however, vendors who sell pre-assembled keyboards, so if
 you do not mind paying extra for this service, this is a good way to check if
 this sort of keyboard is for you. Here is a table with the parts and their
 prices:
@@ -63,7 +63,7 @@ prices:
 | STM32F401 Blackpill Controller                                 | 2       | 2          | 6.96      | 6.96         |
 | TRRS Cable                                                     | 1       | 1          | 3.92      | 3.92         |
 | TRRS Port                                                      | 10      | 2          | 2.61      | 0.522        |
-| Khail Choc Brown Key Switches                                  | 50      | 42         | 26.3      | 22.092       |
+| Kailh Choc Brown Key Switches                                  | 50      | 42         | 26.3      | 22.092       |
 | PBT keycaps                                                    | 50      | 42         | 22.43     | 18.8412      |
 | 6mm x 2mm rubber feet                                          | 100     | 16         | 2.15      | 0.344        |
 | Soldering kit (soldering iron, soldering silicone mat, solder) | 1       | 1          | 6.77      | 6.77         |
@@ -73,18 +73,18 @@ prices:
 
 ### Soldering
 
-Unlike all keyboards that you can buy from a store, the Cantor is a DIY, so you
-need to be comfortable with soldering, or you need to learn how to do it. I had
-never soldered before, so I had to learn how to do it. I watched a few videos on
-youtube and I thought that it isn't that complicated. If you are in the same,
-position like I am, I would recommend you to buy a soldering kit which contains
-thin solder wire 0.5mm or thinner. Anything thicker and it will be difficult to
-contain how much solder you put and you can end up ruining your PCB or other
-parts. I also recommend you to buy a silicone mat and a magnifying glass. The
-mat will stop you from burning your table and the magnifying glass will help you
-to see what you are doing. I didn't buy a magnifying glass and I regret it.
-After staring at tiny PCB elements for a couple of hours my eyes were tired and
-I was beginning to make mistakes by trying to finish the job quickly.
+Unlike all keyboards that you can buy from a store, the Cantor is a DIY board,
+so you need to be comfortable with soldering, or you need to learn how to do it.
+I had never soldered before, so I had to learn how to do it. I watched a few
+videos on YouTube and I thought that it isn't that complicated. If you are in
+the same position as I was, I would recommend you to buy a soldering kit which
+contains thin solder wire 0.5mm or thinner. Anything thicker and it will be
+difficult to contain how much solder you put and you can end up ruining your PCB
+or other parts. I also recommend you to buy a silicone mat and a magnifying
+glass. The mat will stop you from burning your table and the magnifying glass
+will help you to see what you are doing. I didn't buy a magnifying glass and I
+regret it. After staring at tiny PCB elements for a couple of hours my eyes were
+tired and I was beginning to make mistakes by trying to finish the job quickly.
 
 The entire build process took me about 6 hours. Fortunately, Cantor's build
 guide is very straightforward and easy to follow. Once you do one part, the
@@ -111,10 +111,10 @@ and run the following make command after plugging the controller into your
 computer:
 
 ```bash
- make cantor:vial:flash
+make cantor:vial:flash
 ```
 
-Remember to repeat this process for the other side of they keyboard on the other
+Remember to repeat this process for the other side of the keyboard on the other
 controller.
 
 If you are not on Linux, you can use the GUI to flash the firmware. Download the
@@ -125,11 +125,11 @@ these binaries weren't tampered with, so use your own judgement.
 ## Software
 
 Once you have done this, you can plug the controller which will be the master
-into your computer and use the GUI or a chromium-based browser
+into your computer and use the GUI or a Chromium-based browser
 [configurator][11] to configure your layout.
 
-After few trials and errors, I ended up with a layout that I was happy with. It
-looks like this (each picture is a different layer):
+After a few trials and errors, I ended up with a layout that I was happy with.
+It looks like this (each picture is a different layer):
 
 ![keyboard layout layer zero](/assets/images/2024-03-09_15-56_keeb-layout-layer-0.png){: loading="lazy" }
 
@@ -144,9 +144,9 @@ looks like this (each picture is a different layer):
 When I started using the Cantor I could not touch type. Being used to a standard
 keyboard layout, I was making a lot of mistakes and I was very slow. Even with a
 layout printed out and placed in front of me, I was still making mistakes. I
-decided to improve my typing by practicing. Firstly, I stared doing exercises on
-[keybr.com][12], which would teach me to type common word combinations. Once I
-spent few weeks doing those for 30 minutes a day, I decided to move to
+decided to improve my typing by practicing. Firstly, I started doing exercises
+on [keybr.com][12], which would teach me to type common word combinations. Once
+I spent a few weeks doing those for 30 minutes a day, I decided to move to
 exercising by typing words out. I found a website called [monkey-type][13]. I
 set my settings to typing 50 random words and I started to type. I did this for
 a few weeks and I noticed that I was getting better. I was making less mistakes
@@ -172,17 +172,17 @@ is great. There are a few things that I would change if I were to build another
 keyboard. I would use a different color of switches, because the brown ones are
 not light enough. I had to lube them which was time consuming and although it
 improved them by a lot, they still feel a little too heavy. I learnt my lesson
-and bought a switch tester, and decided that pink/gChoc switches are the best
-for me. I would also invest in a plastic case to cover the PCB. I did not do it
-to save money but I can see that dust collects on controllers and it difficult
-to remove if it gets between solder points which are too close together to use a
-brush or blow the dust with a can of compressed air.
+and bought a switch tester, and decided that pink Choc and gChoc switches are
+the best for me. I would also invest in a plastic case to cover the PCB. I did
+not do it to save money but I can see that dust collects on controllers and it
+is difficult to remove if it gets between solder points which are too close
+together to use a brush or blow the dust with a can of compressed air.
 
-These minor issues aside, I am very happy with a switch to a 40% keyboard and I
-don't see myself getting much larger one in the future. I also think I won't be
-going back to a traditional keyboard. If you are thinking about getting a split
-keyboard, I would recommend you to do it. It is a fun project and it is very
-rewarding.
+These minor issues aside, I am very happy with the switch to a 40% keyboard and
+I don't see myself getting a much larger one in the future. I also think I won't
+be going back to a traditional keyboard. If you are thinking about getting a
+split keyboard, I would recommend you to do it. It is a fun project and it is
+very rewarding.
 
 [1]: <https://github.com/kata0510/Lily58>
 [2]: <https://github.com/foostan/crkbd>

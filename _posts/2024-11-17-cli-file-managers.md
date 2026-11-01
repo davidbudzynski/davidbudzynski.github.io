@@ -16,7 +16,7 @@ user interfaces are unavailable or unnecessary.
 
 Among the diverse options available, **Yazi** and **Midnight Commander (MC)**
 stand out as two of the most interesting choices for very different reasons. In
-this article, we’ll explore their features and delve into why **Midnight
+this article, we'll explore their features and delve into why **Midnight
 Commander** is a particularly powerful ally for handling complex tasks.
 
 
@@ -40,7 +40,7 @@ unique advantages, such as:
 **Yazi** is a relatively new CLI file manager that has quickly gained attention
 for its minimalistic yet powerful design. It combines traditional CLI speed with
 modern usability, borrowing design ideas from graphical environments. For those
-who used ranger or nnn, Yazi will feel familiar.
+who have used ranger or nnn, Yazi will feel familiar.
 
 ### Key Features of Yazi:
 
@@ -51,7 +51,7 @@ who used ranger or nnn, Yazi will feel familiar.
    view in macOS Finder, allowing you to see multiple levels of the directory
    structure at once. This feature makes it easy to understand your filesystem's
    hierarchy and move quickly between deeply nested folders.
-3. **Fuzzy Searching**: Locating files is a breeze with Yazi’s intelligent,
+3. **Fuzzy Searching**: Locating files is a breeze with Yazi's intelligent,
    fuzzy search system, perfect for sprawling file systems.
 4. **Lightweight and Cross-Platform**: Yazi is highly portable and works
    seamlessly on Linux, macOS, and Windows.
@@ -60,7 +60,7 @@ who used ranger or nnn, Yazi will feel familiar.
 
 ### When to Use Yazi:
 
-If you’re seeking a **modern CLI experience with a familiar visual
+If you're seeking a **modern CLI experience with a familiar visual
 representation of directories**, Yazi excels. Its columnar view of nested
 directories is particularly useful for users accustomed to graphical file
 managers like macOS Finder, while its lightweight design ensures it stays true
@@ -103,7 +103,7 @@ MC has proved invaluable:
    game-changer. When working on a project requiring assets from various
    locations, I can easily view, compare, and move files without repeatedly
    switching directories.
-2. **Copying Bulk Files**: MC’s straightforward copy and move operations make
+2. **Copying Bulk Files**: MC's straightforward copy and move operations make
    transferring large numbers of files painless.
 3. **Accessing Remote Servers**: The ability to work directly with remote
    filesystems through SFTP has saved me hours of time when managing servers.
@@ -139,6 +139,6 @@ developers, sysadmins, and anyone managing a large number of files. For these
 reasons, **Midnight Commander remains my go-to file manager for day-to-day
 tasks**. 
 
-Yazi’s minimalist and modern approach might suit users with simpler needs, but
-when the workload gets heavy, Midnight Commander’s depth and reliability make it
+Yazi's minimalist and modern approach might suit users with simpler needs, but
+when the workload gets heavy, Midnight Commander's depth and reliability make it
 an indispensable tool.

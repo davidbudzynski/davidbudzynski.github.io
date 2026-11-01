@@ -26,7 +26,7 @@ For R users, Docker offers a way to ensure that your code runs exactly the same
 anywhere, from your laptop to a cloud server. No more "it works on my machine"
 excuses!
 
-You may be thinkging, "But I alredy have R installed on my computer and I use
+You may be thinking, "But I already have R installed on my computer and I use
 renv. That's enough, right?" Well, not quite. While renv is excellent for
 managing R package dependencies and ensuring reproducibility at the package
 level, it falls short in addressing system-level dependencies, R versioning, and
@@ -43,7 +43,7 @@ comprehensive solution for full-stack reproducibility and deployment.
 ### Step 1: Install Docker
 
 Docker is available for Windows, macOS, and Linux. You can download it through a
-package manger of your choice or directly from the [Docker
+package manager of your choice or directly from the [Docker
 website](https://www.docker.com).
 
 ### Step 2: Create a Dockerfile or get familiar with the Rocker project
@@ -52,7 +52,7 @@ A `Dockerfile` is a simple script that tells Docker how to build your
 environment. The easiest way to get started is to use the
 [Rocker](https://www.rocker-project.org) and go with a versioned R image. If you
 look at my default R project setup, you will see that I use the `rocker/r-ver`
-and also install extra applications and version packages tied to specific date.
+and also install extra applications and package versions tied to a specific date.
 This ensures that the environment is reproducible and that the project will run
 the same way in the future.
 
@@ -66,7 +66,7 @@ LABEL org.opencontainers.image.licenses="GPL-2.0-or-later" \
       org.opencontainers.image.authors="Carl Boettiger <cboettig@ropensci.org>"
 
 ENV PANDOC_VERSION=default
-# specify which vesrion of quarto to install (default is the latest)
+# specify which version of Quarto to install (default is the latest)
 ENV QUARTO_VERSION=default
 
 RUN /rocker_scripts/install_pandoc.sh
@@ -122,13 +122,13 @@ RUN install2.r --error --skipinstalled --ncpus -1 \
     && rm -rf /var/lib/apt/lists/*
 # update data.table to the dev version to use the latest features. NOTE that
 #this will pull any changes from the data.table repo, so it isn't recommended if
-# you want to maintein a stable environment and keep reproducibility
+# you want to maintain a stable environment and keep reproducibility
 # RUN R -e "data.table::update_dev_pkg()"
 # install all packages used by rio for I/O
 RUN R -e "rio::install_formats()"
 
 # Once you have scripts to run, they can be added to the image and run during
-# the image build process (as opposed to image rung time).
+# the image build process (as opposed to image run time).
 # RUN Rscript file.R
 ```
 
@@ -156,7 +156,7 @@ This starts a container where your R script will execute exactly as defined.
 
 Docker is a powerful tool with many features and integrations. There are many smart people out there who created nice base images and scripts to help you get started. The Rocker project is a great place to start, but you can also explore other images and scripts on GitHub. 
 
-Additionally, you should read [Building reproducible analytical pipelines with R](https://raps-with-r.dev/) by Bruno Rodrigues. He goes into more detail about how to use Docker for R projects and how to create a reproducible workflow. I have my own [small setup](https://github.com/davidbudzynski/R-project-bootstrap) which uses Makefiles to build the Docker image and run the container. This way I can easily share the project with others and ensure that the environment is the same for everyone. The most important thing is to start and learn as you go. Once you keep using docker, you will see the benefits and how it can help you in your daily work.
+Additionally, you should read [Building reproducible analytical pipelines with R](https://raps-with-r.dev/) by Bruno Rodrigues. He goes into more detail about how to use Docker for R projects and how to create a reproducible workflow. I have my own [small setup](https://github.com/davidbudzynski/R-project-bootstrap) which uses Makefiles to build the Docker image and run the container. This way I can easily share the project with others and ensure that the environment is the same for everyone. The most important thing is to start and learn as you go. Once you keep using Docker, you will see the benefits and how it can help you in your daily work.
 
 ## Closing thoughts
 

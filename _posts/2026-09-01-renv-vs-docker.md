@@ -44,7 +44,7 @@ with its version number and where it came from:
 
 Anyone with your project and your lockfile can run `renv::restore()` and end up
 with the same package versions you had. For most day-to-day breakage — an update
-to a package changing behavior under you — renv solves the problem completely.
+to a package changing behaviour under you — renv solves the problem completely.
 It is lightweight, fast to adopt, and stays out of your way. If you are not using
 it yet, there is little excuse: it takes about five minutes to add to a project.
 

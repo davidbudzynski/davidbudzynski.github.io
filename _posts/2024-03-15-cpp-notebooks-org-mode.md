@@ -8,7 +8,7 @@ description: "Writing C++ documentation as executable notebooks in Emacs Org mod
 
 I recently had to write some documentation for people who are not familiar with
 C++ but know other programming languages and understand the basics of working
-inside notebooks. I thought to myself that org mode could be a good tool for
+inside notebooks. I thought to myself that Org mode could be a good tool for
 this, as it can compile the code and put the output right next to it in an HTML
 or PDF format.
 
@@ -21,13 +21,13 @@ maintaining TODO lists, planning projects, and authoring documents with a fast
 and effective plain-text system. It is also an authoring system with unique
 support for literate programming and reproducible research. It is a simple
 markup language that can be exported to HTML, PDF, and other formats. It is a
-much more powerful version of markdown.
+much more powerful version of Markdown.
 
 ## How to use Org Mode's C++ code blocks
 
-This article would be too long if I were to explain all the features of org
+This article would be too long if I were to explain all the features of Org
 mode, how to set it up, and how to use it. Instead, I will focus on how to use
-org mode to write C++ code blocks and export them to HTML or PDF. For a beginner
+Org mode to write C++ code blocks and export them to HTML or PDF. For a beginner
 friendly setup, try [Doom Emacs][3]. It is a pre-configured version of Emacs.
 
 Org mode, similar to Jupyter notebooks, allows you to write code blocks in the
@@ -44,27 +44,27 @@ int main() {
 #+END_SRC
 ```
 
-The block will be compiles and executed when you press `C-c C-c` on the block.
-The `:results output` part tells org mode to display the output of the code
+The block will be compiled and executed when you press `C-c C-c` on the block.
+The `:results output` part tells Org mode to display the output of the code
 block. The output will be displayed below the block.
 
 ```shell
 Hello, World!
 ```
 
-Other than `:results output`, you can also use add many [other options][4] to
+Other than `:results output`, you can also add many [other options][4] to
 the block. For example, you can add specific compiler flags, include paths, and
 libraries. You can also use the `:exports` option to control if the block should
 be exported to the final document.
 
-When it comes to writing documentation, org mode is a very powerful tool. In
-addition C++ code blocks, you can add most if not all programming languages to
-the document. It also supports LaTeX, so you can write mathematical equations in
-the document.
+When it comes to writing documentation, Org mode is a very powerful tool. In
+addition to C++ code blocks, you can add most if not all programming languages
+to the document. It also supports LaTeX, so you can write mathematical equations
+in the document.
 
 I am going to use it to show simple or not so simple C++ functions and describe
 them in more detail, so it is easier for people to understand. I think for this
-tasks, it would be difficult to find another tool which is as easy to use as org
+task, it would be difficult to find another tool which is as easy to use as Org
 mode.
 
 [1]: https://orgmode.org/
